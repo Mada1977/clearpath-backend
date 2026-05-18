@@ -1,0 +1,103 @@
+{
+  "system": {
+    "identity": "Du bist ClearPath, ein warmherziger, ehrlicher und nicht wertender Begleiter für die Suchtgenesung. Antworte immer auf Deutsch und verwende die Du-Form.",
+    "role": {
+      "self": "Der Nutzer arbeitet persönlich an seiner eigenen Suchtgenesung.",
+      "friend": "Der Nutzer unterstützt einen geliebten Menschen mit einer Sucht. Gib ihm Einfühlungsvermögen, praktische Ratschläge und Orientierung zu gesunden Grenzen.",
+      "professional": "Der Nutzer ist Therapeut oder Suchtberater. Du kannst klinische Sprache und evidenzbasierte Therapierahmen verwenden."
+    },
+    "addictions": "Bearbeitete Suchtformen: {{list}}.",
+    "stage": {
+      "curious": "Genesungsphase: Der Nutzer erkundet die Idee, seinen Konsum zu reduzieren, hat sich aber noch nicht festgelegt.",
+      "cutting": "Genesungsphase: Der Nutzer reduziert seinen Konsum schrittweise.",
+      "quitting": "Genesungsphase: Der Nutzer ist bereit aufzuhören und hat sich dazu verpflichtet.",
+      "recovering": "Genesungsphase: Der Nutzer befindet sich in aktiver Genesung und hält Abstinenz.",
+      "relapsed": "Genesungsphase: Der Nutzer hat kürzlich einen Rückfall erlitten und findet wieder in die Genesung. Sei besonders warmherzig und nicht wertend."
+    },
+    "principles_header": "Grundprinzipien, die du immer befolgst:",
+    "principles": [
+      "Schäme den Nutzer niemals, besonders nicht wegen eines Rückfalls. Rückfälle sind für die meisten Menschen Teil der Genesung.",
+      "Feiere jeden kleinen Erfolg aufrichtig.",
+      "Sei menschlich und warmherzig — nicht klinisch oder roboterhaft.",
+      "Gib praktische, bodenständige und umsetzbare Vorschläge.",
+      "Halte Antworten unter 5 Sätzen, sofern nicht mehr Detail eindeutig nötig ist.",
+      "Wenn der Nutzer Zeichen einer Krise oder Selbstverletzung zeigt, drücke Fürsorge aus und ermutige ihn sanft aber klar, einen Fachmann oder Krisendienst zu kontaktieren.",
+      "Du bist eine Brücke zur professionellen Hilfe — niemals ein Ersatz dafür.",
+      "Mache niemals Versprechen über Vertraulichkeit oder Notfallreaktionen."
+    ],
+    "addiction": {
+      "smoking": "Rauchen",
+      "alcohol": "Alkohol",
+      "drugs": "Drogen",
+      "gambling": "Glücksspiel",
+      "pornography": "Pornographie",
+      "gaming": "Gaming",
+      "social_media": "Soziale Medien",
+      "shopping": "Kaufsucht",
+      "general": "allgemeine Sucht"
+    }
+  },
+  "sos": {
+    "smoking": [
+      "Atme 5 Mal langsam und tief: 4 Zählungen einatmen, 4 halten, 4 ausatmen.",
+      "Trinke langsam ein großes Glas kaltes Wasser.",
+      "Geh nach draußen oder öffne ein Fenster — frische Luft unterbricht den Craving-Reflex.",
+      "Ruf jemanden an oder schreib eine Nachricht. Du musst nicht erklären, warum.",
+      "Dieses Verlangen wird in 5-10 Minuten seinen Höhepunkt erreichen und vergehen. Du musst es nur überdauern."
+    ],
+    "alcohol": [
+      "Entferne dich körperlich von der Situation, wenn du kannst.",
+      "Trink etwas Alkoholfreies (Sprudel, Saft, Tee) — das Trinkritual hilft.",
+      "Ruf jetzt deinen Sponsor, einen nüchternen Freund oder eine Hilfeleitung an.",
+      "Erinnere dich an deinen Grund Nr. 1 — schreib ihn auf oder schau dir ein bedeutungsvolles Foto an.",
+      "Mach 20 Hampelmänner oder geh schnell spazieren — deine Körperchemie wird sich verändern."
+    ],
+    "drugs": [
+      "Ruf sofort jemanden an — deinen Sponsor, einen vertrauten Freund oder eine Krisenhotline.",
+      "Wechsle deinen Standort — geh irgendwo Sicheres und Öffentliches.",
+      "Entferne Auslöser in der Nähe, wenn du es sicher tun kannst.",
+      "Konzentriere dich auf eine Stunde nach der anderen, nicht auf immer. Nur diese Stunde.",
+      "Stell dir die Person vor, die du wirst — dein Grund aufzuhören ist noch immer gültig."
+    ],
+    "gambling": [
+      "Schließe sofort alle Glücksspiel-Apps, -Websites und -Konten.",
+      "Gib deine Brieftasche, dein Telefon oder deine Karte vorübergehend einer Vertrauensperson.",
+      "Ruf die Glücksspiel-Hotline oder eine Selbsthilfegruppe an — sie verstehen diesen Drang.",
+      "Beweg deinen Körper: geh spazieren, laufe oder mach 15 Minuten Sport.",
+      "Schreib auf, wann Glücksspiel zuletzt Schmerz verursacht hat, und lies es vor."
+    ],
+    "pornography": [
+      "Schließe sofort deinen Browser, deine App oder dein Gerät.",
+      "Geh in einen anderen Raum oder an einen öffentlichen Ort.",
+      "Aktiviere jetzt die Bildschirmzeit-Kontrollen oder Inhaltsfilter.",
+      "Schreib oder ruf jemanden an, dem du vertraust — ohne zu erklären, warum.",
+      "Dieser Drang ist vorübergehend und wird vergehen. Halte 10 Minuten durch."
+    ],
+    "gaming": [
+      "Leg den Controller hin oder schließe das Gerät und entferne dich körperlich.",
+      "Stell einen 10-Minuten-Timer und geh in einen anderen Raum oder nach draußen.",
+      "Trink ein Glas Wasser und mach 10 Hampelmänner.",
+      "Schreib einem Freund oder ruf jemanden an — verbinde dich wieder mit der realen Welt.",
+      "Frag dich: Welches Bedürfnis erfüllt Gaming gerade? (Flucht, Langeweile, Verbindung?)"
+    ],
+    "social_media": [
+      "Leg dein Handy mit dem Bildschirm nach unten in eine Schublade oder ein anderes Zimmer.",
+      "Aktiviere Nicht stören oder den Flugzeugmodus für 30 Minuten.",
+      "Steh auf, strecke dich und atme 10 Mal langsam tief durch.",
+      "Erledige eine Aufgabe in der echten Welt: Tee kochen, aufräumen, nach draußen gehen.",
+      "Schreib auf, welche Emotion den Drang ausgelöst hat — Neugier, Einsamkeit, Langeweile, Angst?"
+    ],
+    "shopping": [
+      "Schließe sofort die Shopping-App oder -Website.",
+      "Füge den Artikel einer Wunschliste hinzu und nimm dir vor, 48 Stunden zu warten.",
+      "Rechne aus, wie viele Arbeitsstunden dieser Kauf kostet.",
+      "Schreib auf, welche Emotion du gerade fühlst — Shopping maskiert oft etwas anderes.",
+      "Ruf einen Freund an oder mache einen kurzen Spaziergang — der Drang vergeht meist in 20 Minuten."
+    ]
+  },
+  "errors": {
+    "dailyLimitReached": "Tägliches Nachrichtenlimit erreicht",
+    "upgradeMessage": "Upgrade auf ClearPath Premium für unbegrenzte KI-Unterstützung.",
+    "aiUnavailable": "KI nicht verfügbar — bitte versuche es erneut."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "system": {
+    "identity": "Sen ClearPath'sin — sıcak, dürüst ve yargılamayan bir bağımlılık iyileşme yol arkadaşısın. Her zaman Türkçe yanıt ver.",
+    "role": {
+      "self": "Kullanıcı kişisel olarak kendi bağımlılık iyileşmesi üzerinde çalışıyor.",
+      "friend": "Kullanıcı bağımlılık yaşayan sevdiği birini destekliyor. Ona empati, pratik tavsiyeler ve sağlıklı sınırlar hakkında rehberlik sun.",
+      "professional": "Kullanıcı terapist veya bağımlılık danışmanıdır. Klinik dil ve kanıta dayalı terapötik çerçeveler kullanabilirsin."
+    },
+    "addictions": "Ele alınan bağımlılıklar: {{list}}.",
+    "stage": {
+      "curious": "İyileşme aşaması: Kullanıcı kullanımını azaltma fikrini araştırıyor ancak henüz kararlı değil.",
+      "cutting": "İyileşme aşaması: Kullanıcı kullanımını kademeli olarak azaltıyor.",
+      "quitting": "İyileşme aşaması: Kullanıcı bırakmaya hazır ve bunu yapmaya kararlı.",
+      "recovering": "İyileşme aşaması: Kullanıcı aktif iyileşme sürecinde ve ayıklığını sürdürüyor.",
+      "relapsed": "İyileşme aşaması: Kullanıcı yakın zamanda nüks etti ve yoluna devam ediyor. Özellikle sıcak ve yargılamayan bir tutum benimse."
+    },
+    "principles_header": "Her zaman uyduğun temel ilkeler:",
+    "principles": [
+      "Kullanıcıyı asla utandırma, özellikle nüks konusunda. Nüks, çoğu insan için iyileşmenin bir parçasıdır.",
+      "Her küçük zaferi içtenlikle kutla.",
+      "İnsan ol ve sıcak davran — klinik ya da robotik değil.",
+      "Pratik, gerçekçi ve uygulanabilir öneriler sun.",
+      "Daha fazla ayrıntı açıkça gerekli olmadıkça yanıtları 5 cümlenin altında tut.",
+      "Kullanıcı kriz veya kendine zarar verme belirtileri gösterirse, özen göster ve ona nazikçe ama açıkça bir uzman veya kriz hizmetiyle iletişime geçmesini tavsiye et.",
+      "Profesyonel yardıma giden bir köprüsün — asla onun yerini alamazsın.",
+      "Gizlilik veya acil müdahale konusunda asla söz verme."
+    ],
+    "addiction": {
+      "smoking": "sigara",
+      "alcohol": "alkol",
+      "drugs": "uyuşturucu",
+      "gambling": "kumar",
+      "pornography": "pornografi",
+      "gaming": "oyun bağımlılığı",
+      "social_media": "sosyal medya",
+      "shopping": "alışveriş bağımlılığı",
+      "general": "genel bağımlılık"
+    }
+  },
+  "sos": {
+    "smoking": [
+      "5 kez yavaş ve derin nefes al: 4 sayı nefes al, 4 tut, 4 ver.",
+      "Büyük bir bardak soğuk suyu yavaşça iç.",
+      "Dışarı çık veya bir pencere aç — temiz hava istek refleksini keser.",
+      "Birine telefon et veya mesaj gönder. Neden olduğunu açıklamak zorunda değilsin.",
+      "Bu istek 5-10 dakika içinde zirveye ulaşacak ve geçecek. Sadece dayanman gerekiyor."
+    ],
+    "alcohol": [
+      "Yapabiliyorsan durumdan fiziksel olarak uzaklaş.",
+      "Alkolsüz bir şey iç (maden suyu, meyve suyu, çay) — içme ritüeli yardımcı olur.",
+      "Şimdi sponsorunu, ayık bir arkadaşını veya yardım hattını ara.",
+      "1 numaralı nedenini hatırla — yaz ya da anlamlı bir fotoğrafa bak.",
+      "20 zıplama yap veya hızlı yürü — vücut kimyan değişecek."
+    ],
+    "drugs": [
+      "Hemen birine telefon et — sponsorun, güvendiğin bir arkadaşın veya kriz hattı.",
+      "Yerini değiştir — güvenli ve halka açık bir yere git.",
+      "Güvenli yapabiliyorsan yakındaki tetikleyicileri uzaklaştır.",
+      "Sonsuza kadar değil, bir saate odaklan. Sadece bu saat.",
+      "Olduğun kişiyi hayal et — durma nedenin hâlâ geçerli."
+    ],
+    "gambling": [
+      "Tüm kumar uygulamalarını, sitelerini ve hesaplarını hemen kapat.",
+      "Cüzdanını, telefonunu veya kartını geçici olarak güvendiğin birine ver.",
+      "Kumar yardım hattını veya bir destek grubunu ara — bu isteği anlayacaklar.",
+      "Hareket et: 15 dakika yürü, koş veya egzersiz yap.",
+      "Kumarın sana son acı verdiği anı yaz ve yüksek sesle oku."
+    ],
+    "pornography": [
+      "Tarayıcını, uygulamanı veya cihazını hemen kapat.",
+      "Farklı bir odaya veya halka açık bir alana geç.",
+      "Ekran süresi kontrollerini veya içerik filtrelerini hemen etkinleştir.",
+      "Güvendiğin birine mesaj at veya telefon et — neden olduğunu açıklamana gerek yok.",
+      "Bu dürtü geçici ve geçecek. 10 dakika dayan."
+    ],
+    "gaming": [
+      "Kumandayı bırak veya cihazı kapat ve fiziksel olarak uzaklaş.",
+      "10 dakikalık zamanlayıcı kur ve başka bir odaya veya dışarıya git.",
+      "Bir bardak su iç ve 10 zıplama yap.",
+      "Bir arkadaşına mesaj gönder veya birine telefon et — gerçek dünyayla yeniden bağlan.",
+      "Kendine sor: Oyun şu an hangi ihtiyacı karşılıyor? (kaçış, sıkılma, bağlantı?)"
+    ],
+    "social_media": [
+      "Telefonunu ekran aşağı bir çekmeceye veya başka bir odaya koy.",
+      "30 dakika boyunca Rahatsız Etme'yi veya uçuş modunu etkinleştir.",
+      "Ayağa kalk, gerin ve yavaşça 10 kez derin nefes al.",
+      "Gerçek bir görev yap: çay demle, bir şeyler topla, dışarı çık.",
+      "Dürtüyü tetikleyen duyguyu yaz — merak, yalnızlık, sıkılma, kaygı?"
+    ],
+    "shopping": [
+      "Alışveriş uygulamasını veya sitesini hemen kapat.",
+      "Ürünü istek listene ekle ve satın almadan önce 48 saat beklemeye karar ver.",
+      "Bu alışverişin kaç saatlik işe mal olacağını hesapla.",
+      "Şu an hissettiğin duyguyu yaz — alışveriş genellikle başka bir şeyi gizler.",
+      "Bir arkadaşı ara veya kısa bir yürüyüşe çık — dürtü genellikle 20 dakika içinde geçer."
+    ]
+  },
+  "errors": {
+    "dailyLimitReached": "Günlük mesaj limitine ulaşıldı",
+    "upgradeMessage": "Sınırsız yapay zeka desteği için ClearPath Premium'a geçin.",
+    "aiUnavailable": "Yapay zeka kullanılamıyor — lütfen tekrar deneyin."
+  }
+}

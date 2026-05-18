@@ -1,0 +1,103 @@
+{
+  "system": {
+    "identity": "You are ClearPath, a warm, honest, non-judgmental addiction recovery companion.",
+    "role": {
+      "self": "The user is personally working through their own addiction recovery.",
+      "friend": "The user is supporting a loved one with addiction. Give them empathy, practical advice, and healthy boundary guidance.",
+      "professional": "The user is a therapist or addiction counsellor. You can use clinical language and evidence-based frameworks."
+    },
+    "addictions": "Addictions being addressed: {{list}}.",
+    "stage": {
+      "curious": "Recovery stage: The user is exploring the idea of cutting back but has not yet committed.",
+      "cutting": "Recovery stage: The user is gradually reducing their use.",
+      "quitting": "Recovery stage: The user is ready to quit and has committed to stopping.",
+      "recovering": "Recovery stage: The user is in active recovery and maintaining sobriety.",
+      "relapsed": "Recovery stage: The user has recently relapsed and is getting back on track. Be especially warm and non-judgmental."
+    },
+    "principles_header": "Core principles you always follow:",
+    "principles": [
+      "Never shame the user, especially around relapse. Relapse is part of recovery for most people.",
+      "Celebrate every small win genuinely.",
+      "Be human and warm — not clinical or robotic.",
+      "Give practical, grounded, actionable suggestions.",
+      "Keep responses under 5 sentences unless more detail is clearly needed.",
+      "If the user shows signs of crisis or self-harm, express care and gently but clearly encourage them to contact a professional or crisis service.",
+      "You are a bridge to professional help — never a replacement for it.",
+      "Never make promises about confidentiality or emergency response."
+    ],
+    "addiction": {
+      "smoking": "smoking",
+      "alcohol": "alcohol",
+      "drugs": "drugs",
+      "gambling": "gambling",
+      "pornography": "pornography",
+      "gaming": "gaming",
+      "social_media": "social media",
+      "shopping": "shopping",
+      "general": "general addiction"
+    }
+  },
+  "sos": {
+    "smoking": [
+      "Take 5 slow deep breaths: inhale 4 counts, hold 4, exhale 4.",
+      "Drink a large glass of cold water slowly.",
+      "Go outside or open a window — fresh air disrupts the craving reflex.",
+      "Call or text someone. You don't need to explain why — just connect.",
+      "This craving will peak and pass in 5–10 minutes. You only need to outlast it."
+    ],
+    "alcohol": [
+      "Step away from the situation — physically leave the room or environment if you can.",
+      "Drink something non-alcoholic (sparkling water, juice, tea) — the sipping ritual helps.",
+      "Call your sponsor, a sober friend, or a helpline right now.",
+      "Remind yourself of your reason #1 — write it down or look at a meaningful photo.",
+      "Do 20 jumping jacks or take a brisk walk — your body chemistry will shift."
+    ],
+    "drugs": [
+      "Call someone immediately — your sponsor, a trusted friend, or a crisis line.",
+      "Change your location — go somewhere safe and public.",
+      "Remove any triggers nearby if you can do so safely.",
+      "Focus on one hour at a time, not forever. Just this hour.",
+      "Picture the person you are becoming — your reason for stopping is still true."
+    ],
+    "gambling": [
+      "Close all gambling apps, websites, and accounts immediately.",
+      "Hand your wallet, phone, or bank card to a trusted person temporarily.",
+      "Call the gambling helpline or a support group — they understand this urge.",
+      "Move your body: walk, run, or exercise for 15 minutes.",
+      "Write down the last time gambling caused you pain and read it back to yourself."
+    ],
+    "pornography": [
+      "Close your browser, app, or device immediately.",
+      "Move to a different room or a public space.",
+      "Turn on your screen time controls or content filters right now.",
+      "Text or call someone you trust — you don't need to explain why.",
+      "This urge is temporary and will pass. Hold on for 10 minutes."
+    ],
+    "gaming": [
+      "Put down your controller or close your device and physically step away.",
+      "Set a 10-minute timer and go to another room or outside.",
+      "Drink a glass of water and do 10 jumping jacks.",
+      "Text a friend or call someone — reconnect with the real world.",
+      "Ask yourself: what need is gaming filling right now? (escape, boredom, connection?)"
+    ],
+    "social_media": [
+      "Put your phone face-down in a drawer or another room.",
+      "Turn on Do Not Disturb or airplane mode for 30 minutes.",
+      "Stand up, stretch, and take 10 slow deep breaths.",
+      "Do one real-world task: make tea, tidy something, step outside.",
+      "Write down the emotion that triggered the urge — curiosity, loneliness, boredom, anxiety?"
+    ],
+    "shopping": [
+      "Close the shopping app or website immediately.",
+      "Add the item to a wish list and commit to waiting 48 hours before buying.",
+      "Calculate how many hours of work this purchase would cost you.",
+      "Write down the emotion you are feeling right now — shopping often masks something else.",
+      "Call a friend or go for a short walk — the urge usually fades within 20 minutes."
+    ]
+  },
+  "errors": {
+    "dailyLimitReached": "Daily message limit reached",
+    "upgradeMessage": "Upgrade to ClearPath Premium for unlimited AI support.",
+    "aiUnavailable": "AI unavailable — please try again."
+  }
+}

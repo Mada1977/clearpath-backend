@@ -1,0 +1,66 @@
+const express = require('express');
+const helmet = require('helmet');
+const cors = require('cors');
+const compression = require('compression');
+const morgan = require('morgan');
+const rateLimit = require('express-rate-limit');
+const logger = require('./utils/logger');
+
+const authRoutes    = require('./routes/auth');
+const userRoutes    = require('./routes/users');
+const logRoutes     = require('./routes/logs');
+const aiRoutes      = require('./routes/ai');
+const healthRoutes  = require('./routes/health');
+
+const app = express();
+
+// ─── Security middleware ────────────────────────────────────
+app.use(helmet());
+
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || '').split(',').map(o => o.trim());
+app.use(cors({
+  origin: (origin, cb) => {
+    if (!origin || allowedOrigins.includes(origin)) return cb(null, true);
+    cb(new Error(`CORS blocked: ${origin}`));
+  },
+  credentials: true,
+}));
+
+// ─── General middleware ─────────────────────────────────────
+app.use(compression());
+app.use(express.json({ limit: '10kb' }));
+app.use(express.urlencoded({ extended: true, limit: '10kb' }));
+app.use(morgan('combined', {
+  stream: { write: (msg) => logger.http(msg.trim()) },
+}));
+
+// ─── Global rate limiting ───────────────────────────────────
+app.use(rateLimit({
+  windowMs: 60 * 1000,   // 1 minute
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: 'Too many requests — please slow down.' },
+}));
+
+// ─── Routes ─────────────────────────────────────────────────
+app.use('/v1/health',  healthRoutes);
+app.use('/v1/auth',    authRoutes);
+app.use('/v1/users',   userRoutes);
+app.use('/v1/logs',    logRoutes);
+app.use('/v1/ai',      aiRoutes);
+
+// ─── 404 handler ────────────────────────────────────────────
+app.use((req, res) => {
+  res.status(404).json({ error: 'Route not found' });
+});
+
+// ─── Global error handler ───────────────────────────────────
+app.use((err, req, res, next) => {
+  logger.error(`${err.status || 500} — ${err.message}`, { stack: err.stack });
+  const status = err.status || 500;
+  const message = status < 500 ? err.message : 'Internal server error';
+  res.status(status).json({ error: message });
+});
+
+module.exports = app;

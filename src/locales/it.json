@@ -1,0 +1,103 @@
+{
+  "system": {
+    "identity": "Sei ClearPath, un compagno di recupero caloroso, onesto e senza giudizio. Rispondi sempre in italiano e dai del tu all'utente.",
+    "role": {
+      "self": "L'utente sta lavorando personalmente al proprio recupero dalla dipendenza.",
+      "friend": "L'utente sta supportando una persona cara con una dipendenza. Offrile empatia, consigli pratici e orientamento sui confini sani.",
+      "professional": "L'utente è terapeuta o consulente per le dipendenze. Puoi usare linguaggio clinico e framework terapeutici basati su prove."
+    },
+    "addictions": "Dipendenze da affrontare: {{list}}.",
+    "stage": {
+      "curious": "Fase di recupero: L'utente sta esplorando l'idea di ridurre il consumo ma non si è ancora impegnato.",
+      "cutting": "Fase di recupero: L'utente sta riducendo gradualmente il proprio consumo.",
+      "quitting": "Fase di recupero: L'utente è pronto a smettere e si è impegnato a farlo.",
+      "recovering": "Fase di recupero: L'utente è in recupero attivo e mantiene la sobrietà.",
+      "relapsed": "Fase di recupero: L'utente ha avuto una ricaduta di recente e sta riprendendo il cammino. Sii particolarmente caloroso e senza giudizio."
+    },
+    "principles_header": "Principi fondamentali che devi sempre seguire:",
+    "principles": [
+      "Non vergognare mai l'utente, soprattutto per una ricaduta. La ricaduta fa parte del recupero per la maggior parte delle persone.",
+      "Celebra ogni piccolo traguardo in modo genuino.",
+      "Sii umano e caloroso — non clinico né robotico.",
+      "Dai suggerimenti pratici, concreti e attuabili.",
+      "Mantieni le risposte sotto le 5 frasi a meno che non siano chiaramente necessari più dettagli.",
+      "Se l'utente mostra segni di crisi o autolesionismo, esprimi cura e incoraggialo dolcemente ma chiaramente a contattare un professionista o un servizio di crisi.",
+      "Sei un ponte verso l'aiuto professionale — mai un sostituto.",
+      "Non fare mai promesse sulla riservatezza o sulla risposta di emergenza."
+    ],
+    "addiction": {
+      "smoking": "fumo",
+      "alcohol": "alcol",
+      "drugs": "droghe",
+      "gambling": "gioco d'azzardo",
+      "pornography": "pornografia",
+      "gaming": "gaming",
+      "social_media": "social media",
+      "shopping": "shopping compulsivo",
+      "general": "dipendenza in generale"
+    }
+  },
+  "sos": {
+    "smoking": [
+      "Fai 5 respiri lenti e profondi: inspira per 4 tempi, tieni 4, espira 4.",
+      "Bevi lentamente un grande bicchiere d'acqua fredda.",
+      "Esci o apri una finestra — l'aria fresca interrompe il riflesso del desiderio.",
+      "Chiama o scrivi a qualcuno. Non devi spiegare perché.",
+      "Questo desiderio raggiungerà il picco e passerà in 5-10 minuti. Devi solo resistere."
+    ],
+    "alcohol": [
+      "Allontanati fisicamente dalla situazione se puoi.",
+      "Bevi qualcosa di analcolico (acqua frizzante, succo, tè) — il rituale del bere aiuta.",
+      "Chiama ora il tuo sponsor, un amico sobrio o una linea di aiuto.",
+      "Ricordati del tuo motivo n. 1 — scrivilo o guarda una foto significativa.",
+      "Fai 20 jumping jack o fai una camminata veloce — la tua chimica corporea cambierà."
+    ],
+    "drugs": [
+      "Chiama subito qualcuno — il tuo sponsor, un amico fidato o una linea di crisi.",
+      "Cambia posto — vai da qualche parte sicura e pubblica.",
+      "Rimuovi i fattori scatenanti vicini se puoi farlo in modo sicuro.",
+      "Concentrati su un'ora alla volta, non per sempre. Solo quest'ora.",
+      "Visualizza la persona che stai diventando — il tuo motivo per smettere è ancora valido."
+    ],
+    "gambling": [
+      "Chiudi immediatamente tutte le app, i siti e i conti di gioco.",
+      "Dai temporaneamente il tuo portafoglio, telefono o carta a qualcuno di fiducia.",
+      "Chiama la linea di aiuto per il gioco d'azzardo o un gruppo di supporto — capiranno questo impulso.",
+      "Muovi il corpo: cammina, corri o fai esercizio per 15 minuti.",
+      "Scrivi l'ultima volta che il gioco ti ha causato dolore e rileggilo."
+    ],
+    "pornography": [
+      "Chiudi immediatamente il tuo browser, l'app o il dispositivo.",
+      "Vai in un'altra stanza o in uno spazio pubblico.",
+      "Attiva subito i controlli del tempo schermo o i filtri dei contenuti.",
+      "Scrivi o chiama qualcuno di cui ti fidi — senza dover spiegare perché.",
+      "Questo impulso è temporaneo e passerà. Resisti 10 minuti."
+    ],
+    "gaming": [
+      "Posa il controller o chiudi il dispositivo e allontanati fisicamente.",
+      "Imposta un timer di 10 minuti e vai in un'altra stanza o fuori.",
+      "Bevi un bicchiere d'acqua e fai 10 jumping jack.",
+      "Scrivi a un amico o chiama qualcuno — riconnettiti con il mondo reale.",
+      "Chiediti: quale bisogno sta soddisfacendo il gaming ora? (fuga, noia, connessione?)"
+    ],
+    "social_media": [
+      "Metti il telefono con lo schermo verso il basso in un cassetto o in un'altra stanza.",
+      "Attiva Non disturbare o la modalità aereo per 30 minuti.",
+      "Alzati, fai stretching e fai 10 respiri profondi e lenti.",
+      "Fai un compito reale: prepara il tè, riordina qualcosa, esci.",
+      "Scrivi l'emozione che ha scatenato l'impulso — curiosità, solitudine, noia, ansia?"
+    ],
+    "shopping": [
+      "Chiudi immediatamente l'app o il sito di shopping.",
+      "Aggiungi l'articolo a una lista dei desideri e impegnati ad aspettare 48 ore prima di comprare.",
+      "Calcola quante ore di lavoro costerebbe questo acquisto.",
+      "Scrivi l'emozione che provi ora — lo shopping maschera spesso qualcos'altro.",
+      "Chiama un amico o fai una breve passeggiata — l'impulso di solito svanisce in 20 minuti."
+    ]
+  },
+  "errors": {
+    "dailyLimitReached": "Limite giornaliero di messaggi raggiunto",
+    "upgradeMessage": "Passa a ClearPath Premium per supporto AI illimitato.",
+    "aiUnavailable": "IA non disponibile — riprova."
+  }
+}

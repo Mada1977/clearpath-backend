@@ -1,0 +1,103 @@
+{
+  "system": {
+    "identity": "Tu es ClearPath, un compagnon de rétablissement bienveillant, honnête et sans jugement. Réponds toujours en français et tutoie l'utilisateur.",
+    "role": {
+      "self": "L'utilisateur traverse personnellement sa propre démarche de rétablissement.",
+      "friend": "L'utilisateur soutient un proche confronté à l'addiction. Offre empathie, conseils pratiques et guidance sur les limites saines.",
+      "professional": "L'utilisateur est thérapeute ou conseiller en addictologie. Tu peux utiliser un langage clinique et des cadres thérapeutiques fondés sur des preuves."
+    },
+    "addictions": "Addictions à traiter : {{list}}.",
+    "stage": {
+      "curious": "Stade de rétablissement : L'utilisateur explore l'idée de réduire sa consommation sans encore s'y être engagé.",
+      "cutting": "Stade de rétablissement : L'utilisateur réduit progressivement sa consommation.",
+      "quitting": "Stade de rétablissement : L'utilisateur est prêt à arrêter et s'y est fermement engagé.",
+      "recovering": "Stade de rétablissement : L'utilisateur est en rétablissement actif et maintient sa sobriété.",
+      "relapsed": "Stade de rétablissement : L'utilisateur a récemment rechuté et reprend son parcours. Sois particulièrement chaleureux et sans jugement."
+    },
+    "principles_header": "Principes fondamentaux à toujours respecter :",
+    "principles": [
+      "Ne jamais faire honte à l'utilisateur, notamment en cas de rechute. La rechute fait partie du rétablissement pour la plupart des gens.",
+      "Célébrer sincèrement chaque petite victoire.",
+      "Être humain et chaleureux — pas clinique ni robotique.",
+      "Donner des suggestions pratiques, concrètes et applicables.",
+      "Garder les réponses en dessous de 5 phrases sauf si plus de détails sont clairement nécessaires.",
+      "Si l'utilisateur montre des signes de crise ou d'automutilation, exprimer de la bienveillance et l'encourager doucement mais clairement à contacter un professionnel ou un service de crise.",
+      "Tu es un pont vers l'aide professionnelle — jamais un substitut.",
+      "Ne jamais promettre la confidentialité ni une intervention d'urgence."
+    ],
+    "addiction": {
+      "smoking": "tabac",
+      "alcohol": "alcool",
+      "drugs": "drogues",
+      "gambling": "jeu",
+      "pornography": "pornographie",
+      "gaming": "jeux vidéo",
+      "social_media": "réseaux sociaux",
+      "shopping": "achats compulsifs",
+      "general": "addiction en général"
+    }
+  },
+  "sos": {
+    "smoking": [
+      "Prends 5 respirations lentes : inspire 4 temps, retiens 4, expire 4.",
+      "Bois un grand verre d'eau froide lentement.",
+      "Sors ou ouvre une fenêtre — l'air frais coupe l'envie.",
+      "Appelle ou envoie un message à quelqu'un — sans avoir à expliquer pourquoi.",
+      "Cette envie va atteindre un pic et passer en 5 à 10 minutes. Tu dois juste tenir."
+    ],
+    "alcohol": [
+      "Quitte physiquement la situation — sors de la pièce ou du lieu si possible.",
+      "Prends une boisson sans alcool (eau pétillante, jus, thé) — le rituel de boire aide.",
+      "Appelle ton sponsor, un ami sobre ou une ligne d'aide maintenant.",
+      "Rappelle-toi ta raison n°1 — note-la ou regarde une photo qui compte.",
+      "Fais 20 sauts ou marche rapidement — ta chimie corporelle va changer."
+    ],
+    "drugs": [
+      "Appelle quelqu'un immédiatement — ton sponsor, un ami de confiance ou une ligne de crise.",
+      "Change d'endroit — va quelque part de sûr et public.",
+      "Éloigne-toi des déclencheurs à portée de main si tu peux le faire en sécurité.",
+      "Concentre-toi sur une heure à la fois, pas sur toujours. Juste cette heure.",
+      "Visualise la personne que tu deviens — ta raison d'arrêter est toujours vraie."
+    ],
+    "gambling": [
+      "Ferme toutes les applications, sites et comptes de jeu immédiatement.",
+      "Confie temporairement ton portefeuille, téléphone ou carte à quelqu'un de confiance.",
+      "Appelle la ligne d'aide jeu ou un groupe de soutien — ils comprennent cette envie.",
+      "Bouge : marche, cours ou fais de l'exercice pendant 15 minutes.",
+      "Note la dernière fois que le jeu t'a causé de la douleur et relis-le."
+    ],
+    "pornography": [
+      "Ferme ton navigateur, ton application ou ton appareil immédiatement.",
+      "Change de pièce ou va dans un espace public.",
+      "Active maintenant les contrôles de temps d'écran ou les filtres de contenu.",
+      "Envoie un message ou appelle quelqu'un en qui tu as confiance — sans besoin d'expliquer.",
+      "Cette envie est temporaire et passera. Tiens bon 10 minutes."
+    ],
+    "gaming": [
+      "Pose ta manette ou ferme ton appareil et éloigne-toi physiquement.",
+      "Règle un minuteur de 10 minutes et va dans une autre pièce ou dehors.",
+      "Bois un verre d'eau et fais 10 sauts.",
+      "Envoie un message à un ami ou appelle quelqu'un — reconnecte-toi au monde réel.",
+      "Demande-toi : quel besoin le jeu comble-t-il en ce moment ? (évasion, ennui, connexion ?)"
+    ],
+    "social_media": [
+      "Pose ton téléphone face contre table dans un tiroir ou une autre pièce.",
+      "Active Ne pas déranger ou le mode avion pendant 30 minutes.",
+      "Lève-toi, étire-toi et prends 10 respirations lentes.",
+      "Fais une tâche réelle : prépare du thé, range quelque chose, sors.",
+      "Note l'émotion qui a déclenché l'envie — curiosité, solitude, ennui, anxiété ?"
+    ],
+    "shopping": [
+      "Ferme l'application ou le site de shopping immédiatement.",
+      "Ajoute l'article à une liste de souhaits et engage-toi à attendre 48h avant d'acheter.",
+      "Calcule combien d'heures de travail cet achat représente.",
+      "Note l'émotion que tu ressens maintenant — le shopping masque souvent autre chose.",
+      "Appelle un ami ou fais une courte promenade — l'envie disparaît généralement en 20 minutes."
+    ]
+  },
+  "errors": {
+    "dailyLimitReached": "Limite de messages quotidienne atteinte",
+    "upgradeMessage": "Passez à ClearPath Premium pour un support IA illimité.",
+    "aiUnavailable": "IA indisponible — veuillez réessayer."
+  }
+}

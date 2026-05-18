@@ -1,0 +1,103 @@
+{
+  "system": {
+    "identity": "Ești ClearPath, un companion de recuperare cald, sincer și lipsit de judecată. Răspunde întotdeauna în română.",
+    "role": {
+      "self": "Utilizatorul lucrează personal la propria recuperare din dependență.",
+      "friend": "Utilizatorul sprijină o persoană dragă cu o dependență. Oferă-i empatie, sfaturi practice și îndrumare privind limitele sănătoase.",
+      "professional": "Utilizatorul este terapeut sau consilier în dependențe. Poți folosi limbaj clinic și cadre terapeutice bazate pe dovezi."
+    },
+    "addictions": "Dependențe abordate: {{list}}.",
+    "stage": {
+      "curious": "Etapă de recuperare: Utilizatorul explorează ideea de a reduce consumul, dar nu s-a angajat încă.",
+      "cutting": "Etapă de recuperare: Utilizatorul își reduce treptat consumul.",
+      "quitting": "Etapă de recuperare: Utilizatorul este pregătit să renunțe și s-a angajat să se oprească.",
+      "recovering": "Etapă de recuperare: Utilizatorul este în recuperare activă și menține sobrietatea.",
+      "relapsed": "Etapă de recuperare: Utilizatorul a recăzut recent și se întoarce pe drum. Fii deosebit de cald și lipsit de judecată."
+    },
+    "principles_header": "Principii fundamentale pe care trebuie să le respecți întotdeauna:",
+    "principles": [
+      "Nu rușina niciodată utilizatorul, mai ales în legătură cu o recădere. Recăderea face parte din recuperare pentru cei mai mulți oameni.",
+      "Celebrează fiecare mică victorie în mod sincer.",
+      "Fii uman și cald — nu clinic sau robotic.",
+      "Oferă sugestii practice, concrete și acționabile.",
+      "Păstrează răspunsurile sub 5 propoziții dacă nu sunt necesare mai multe detalii.",
+      "Dacă utilizatorul arată semne de criză sau autovătămare, exprimă grijă și încurajează-l blând, dar clar, să contacteze un profesionist sau un serviciu de criză.",
+      "Ești un pod către ajutorul profesional — niciodată un substitut.",
+      "Nu face niciodată promisiuni despre confidențialitate sau răspuns de urgență."
+    ],
+    "addiction": {
+      "smoking": "fumat",
+      "alcohol": "alcool",
+      "drugs": "droguri",
+      "gambling": "jocuri de noroc",
+      "pornography": "pornografie",
+      "gaming": "jocuri video",
+      "social_media": "rețele sociale",
+      "shopping": "cumpărături compulsive",
+      "general": "dependență în general"
+    }
+  },
+  "sos": {
+    "smoking": [
+      "Respiră lent de 5 ori: inspiră 4 timpi, ține 4, expiră 4.",
+      "Bea un pahar mare de apă rece încet.",
+      "Ieși afară sau deschide o fereastră — aerul proaspăt întrerupe reflexul poftei.",
+      "Sună sau trimite un mesaj cuiva. Nu trebuie să explici de ce.",
+      "Această poftă va atinge un vârf și va trece în 5-10 minute. Trebuie doar să rezistați."
+    ],
+    "alcohol": [
+      "Îndepărtează-te fizic de situație dacă poți.",
+      "Bea ceva fără alcool (apă minerală, suc, ceai) — ritualul de a bea ajută.",
+      "Sună-ți sponsorul, un prieten sobru sau o linie de ajutor acum.",
+      "Amintește-ți motivul tău nr. 1 — scrie-l sau uită-te la o fotografie semnificativă.",
+      "Fă 20 de sărituri sau mergi rapid — chimia corpului tău se va schimba."
+    ],
+    "drugs": [
+      "Sună pe cineva imediat — sponsorul, un prieten de încredere sau o linie de criză.",
+      "Schimbă locul — du-te undeva sigur și public.",
+      "Îndepărtează factorii declanșatori din apropiere dacă poți face asta în siguranță.",
+      "Concentrează-te pe o oră la rând, nu pe pentru totdeauna. Doar această oră.",
+      "Vizualizează persoana care devii — motivul tău de a te opri este în continuare valabil."
+    ],
+    "gambling": [
+      "Închide toate aplicațiile, site-urile și conturile de jocuri de noroc imediat.",
+      "Predă temporar portofelul, telefonul sau cardul unei persoane de încredere.",
+      "Sună la linia de ajutor pentru jocuri de noroc sau un grup de sprijin — vor înțelege acest impuls.",
+      "Mișcă-te: mergi, aleargă sau fă exerciții timp de 15 minute.",
+      "Scrie ultima dată când jocul de noroc ți-a cauzat durere și recitește-o."
+    ],
+    "pornography": [
+      "Închide browserul, aplicația sau dispozitivul imediat.",
+      "Mergi în altă cameră sau într-un spațiu public.",
+      "Activează acum controalele timpului de ecran sau filtrele de conținut.",
+      "Trimite un mesaj sau sună pe cineva în care ai încredere — fără să explici de ce.",
+      "Acest impuls este temporar și va trece. Rezistă 10 minute."
+    ],
+    "gaming": [
+      "Pune jos controlerul sau închide dispozitivul și îndepărtează-te fizic.",
+      "Setează un cronometru de 10 minute și du-te în altă cameră sau afară.",
+      "Bea un pahar de apă și fă 10 sărituri.",
+      "Trimite un mesaj unui prieten sau sună pe cineva — reconectează-te cu lumea reală.",
+      "Întreabă-te: ce nevoie satisface jocul acum? (evadare, plictiseală, conectare?)"
+    ],
+    "social_media": [
+      "Pune telefonul cu ecranul în jos într-un sertar sau altă cameră.",
+      "Activează Nu deranja sau modul avion timp de 30 de minute.",
+      "Ridică-te, întinde-te și respiră adânc de 10 ori lent.",
+      "Fă o sarcină reală: pregătește ceai, strânge ceva, ieși afară.",
+      "Notează emoția care a declanșat impulsul — curiozitate, singurătate, plictiseală, anxietate?"
+    ],
+    "shopping": [
+      "Închide aplicația sau site-ul de cumpărături imediat.",
+      "Adaugă articolul pe o listă de dorințe și angajează-te să aștepți 48 de ore înainte de a cumpăra.",
+      "Calculează câte ore de muncă ar costa această achiziție.",
+      "Notează emoția pe care o simți acum — cumpărăturile maschează adesea altceva.",
+      "Sună un prieten sau fă o scurtă plimbare — impulsul dispare de obicei în 20 de minute."
+    ]
+  },
+  "errors": {
+    "dailyLimitReached": "Limita zilnică de mesaje a fost atinsă",
+    "upgradeMessage": "Actualizați la ClearPath Premium pentru suport AI nelimitat.",
+    "aiUnavailable": "AI indisponibil — vă rugăm să încercați din nou."
+  }
+}

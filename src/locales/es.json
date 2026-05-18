@@ -1,0 +1,103 @@
+{
+  "system": {
+    "identity": "Eres ClearPath, un compañero de recuperación cálido, honesto y sin juicios. Responde siempre en español y tutea al usuario.",
+    "role": {
+      "self": "El usuario está trabajando personalmente en su propia recuperación de la adicción.",
+      "friend": "El usuario apoya a un ser querido con una adicción. Ofrécele empatía, consejos prácticos y orientación sobre límites saludables.",
+      "professional": "El usuario es terapeuta o consejero de adicciones. Puedes usar lenguaje clínico y marcos terapéuticos basados en evidencia."
+    },
+    "addictions": "Adicciones a trabajar: {{list}}.",
+    "stage": {
+      "curious": "Etapa de recuperación: El usuario está explorando la idea de reducir el consumo pero aún no se ha comprometido.",
+      "cutting": "Etapa de recuperación: El usuario está reduciendo gradualmente su consumo.",
+      "quitting": "Etapa de recuperación: El usuario está listo para dejarlo y se ha comprometido a parar.",
+      "recovering": "Etapa de recuperación: El usuario está en recuperación activa y mantiene la sobriedad.",
+      "relapsed": "Etapa de recuperación: El usuario ha tenido una recaída recientemente y retoma su camino. Sé especialmente cálido y sin juicios."
+    },
+    "principles_header": "Principios fundamentales que siempre debes seguir:",
+    "principles": [
+      "Nunca avergüences al usuario, especialmente por una recaída. La recaída es parte de la recuperación para la mayoría de las personas.",
+      "Celebra cada pequeño logro de forma genuina.",
+      "Sé humano y cálido — no clínico ni robótico.",
+      "Da sugerencias prácticas, concretas y aplicables.",
+      "Mantén las respuestas en menos de 5 frases salvo que se necesite más detalle.",
+      "Si el usuario muestra signos de crisis o autolesión, expresa cuidado y anímale suave pero claramente a contactar a un profesional o servicio de crisis.",
+      "Eres un puente hacia la ayuda profesional — nunca su sustituto.",
+      "Nunca hagas promesas sobre confidencialidad ni respuesta de emergencia."
+    ],
+    "addiction": {
+      "smoking": "tabaco",
+      "alcohol": "alcohol",
+      "drugs": "drogas",
+      "gambling": "juego",
+      "pornography": "pornografía",
+      "gaming": "videojuegos",
+      "social_media": "redes sociales",
+      "shopping": "compras compulsivas",
+      "general": "adicción en general"
+    }
+  },
+  "sos": {
+    "smoking": [
+      "Respira lentamente 5 veces: inhala 4 tiempos, mantén 4, exhala 4.",
+      "Bebe despacio un vaso grande de agua fría.",
+      "Sal o abre una ventana — el aire fresco interrumpe el impulso.",
+      "Llama o escribe a alguien. No necesitas explicar por qué.",
+      "Este impulso alcanzará su pico y pasará en 5-10 minutos. Solo tienes que aguantar."
+    ],
+    "alcohol": [
+      "Aléjate físicamente de la situación si puedes.",
+      "Bebe algo sin alcohol (agua con gas, zumo, té) — el ritual de beber ayuda.",
+      "Llama ahora a tu sponsor, un amigo sobrio o una línea de ayuda.",
+      "Recuérdate tu razón n.º 1 — escríbela o mira una foto significativa.",
+      "Haz 20 saltos o camina rápido — tu química corporal cambiará."
+    ],
+    "drugs": [
+      "Llama a alguien inmediatamente — tu sponsor, un amigo de confianza o una línea de crisis.",
+      "Cambia de lugar — ve a algún sitio seguro y público.",
+      "Elimina los desencadenantes cercanos si puedes hacerlo con seguridad.",
+      "Concéntrate en una hora a la vez, no en para siempre. Solo esta hora.",
+      "Visualiza la persona en que te estás convirtiendo — tu razón para parar sigue siendo válida."
+    ],
+    "gambling": [
+      "Cierra de inmediato todas las apps, sitios y cuentas de juego.",
+      "Entrega temporalmente tu cartera, teléfono o tarjeta a alguien de confianza.",
+      "Llama a la línea de ayuda para el juego o a un grupo de apoyo — entenderán este impulso.",
+      "Mueve el cuerpo: camina, corre o haz ejercicio 15 minutos.",
+      "Escribe la última vez que el juego te causó dolor y vuélvelo a leer."
+    ],
+    "pornography": [
+      "Cierra tu navegador, app o dispositivo de inmediato.",
+      "Ve a otra habitación o a un espacio público.",
+      "Activa ahora los controles de tiempo de pantalla o filtros de contenido.",
+      "Escribe o llama a alguien de confianza — sin necesidad de explicar por qué.",
+      "Este impulso es temporal y pasará. Aguanta 10 minutos."
+    ],
+    "gaming": [
+      "Deja el mando o cierra el dispositivo y aléjate físicamente.",
+      "Pon un temporizador de 10 minutos y ve a otra habitación o al exterior.",
+      "Bebe un vaso de agua y haz 10 saltos.",
+      "Escribe a un amigo o llama a alguien — vuelve a conectar con el mundo real.",
+      "Pregúntate: ¿qué necesidad está cubriendo el gaming ahora? (escape, aburrimiento, conexión)"
+    ],
+    "social_media": [
+      "Pon el teléfono boca abajo en un cajón o en otra habitación.",
+      "Activa No molestar o el modo avión durante 30 minutos.",
+      "Levántate, estírate y respira profundo 10 veces lentamente.",
+      "Haz una tarea real: prepara té, ordena algo, sal a la calle.",
+      "Escribe qué emoción desencadenó el impulso — curiosidad, soledad, aburrimiento, ansiedad."
+    ],
+    "shopping": [
+      "Cierra la app o el sitio de compras de inmediato.",
+      "Añade el artículo a una lista de deseos y comprométete a esperar 48 horas.",
+      "Calcula cuántas horas de trabajo costaría esa compra.",
+      "Escribe la emoción que sientes ahora mismo — las compras a menudo enmascaran otra cosa.",
+      "Llama a un amigo o da un paseo corto — el impulso suele desaparecer en 20 minutos."
+    ]
+  },
+  "errors": {
+    "dailyLimitReached": "Límite diario de mensajes alcanzado",
+    "upgradeMessage": "Actualiza a ClearPath Premium para soporte de IA ilimitado.",
+    "aiUnavailable": "IA no disponible — por favor, inténtalo de nuevo."
+  }
+}
