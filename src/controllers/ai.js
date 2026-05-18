@@ -152,6 +152,7 @@ function buildSystemPrompt(user) {
     t(locale, `system.stage.${user.stage}`),
     t(locale, 'system.principles_header'),
     ...principles.map(p => `- ${p}`),
+    'CRITICAL: Always respond in the exact same language the user writes in. If they write in English, respond in English. If they write in French, respond in French. If they write in Arabic, respond in Arabic. Never switch languages unless the user switches first.',
   ].filter(Boolean).join('\n');
 }
 
