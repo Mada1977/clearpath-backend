@@ -12,7 +12,8 @@ router.get('/me',                ctrl.getMe);
 router.patch('/me',              ctrl.updateMe);
 router.delete('/me',             ctrl.deleteMe);
 router.post('/me/verify-age',    ctrl.verifyAge);
-router.get('/me/stats',          ctrl.getStats);
-router.get('/me/export',         ctrl.exportData);
+router.get('/me/stats',            ctrl.getStats);
+router.get('/me/stability-score', ctrl.getStabilityScore);
+router.get('/me/export',          ctrl.exportData);
 
 module.exports = router;

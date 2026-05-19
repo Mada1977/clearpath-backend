@@ -135,6 +135,61 @@ async function getStats(req, res, next) {
   }
 }
 
+// ── GET /v1/users/me/stability-score ────────────────────────
+async function getStabilityScore(req, res, next) {
+  try {
+    const prisma = getPrisma();
+    const userId = req.user.id;
+
+    const now   = new Date();
+    const h24   = new Date(now - 86400000);
+
+    const [recentLogs, allLogs] = await Promise.all([
+      prisma.log.findMany({
+        where: { userId, loggedAt: { gte: h24 } },
+        orderBy: { loggedAt: 'desc' },
+      }),
+      prisma.log.findMany({
+        where: { userId },
+        select: { outcome: true, loggedAt: true },
+      }),
+    ]);
+
+    let score = 100;
+
+    // Deductions for missing check-ins
+    const streak = calculateStreak(allLogs);
+    if (recentLogs.length === 0) {
+      score -= 20;
+      // Extra -10 per consecutive silent day, capped at -30 total deduction
+      const daysSinceLastLog = allLogs.length
+        ? Math.floor((now - new Date(allLogs[0].loggedAt)) / 86400000)
+        : 7;
+      score -= Math.min((daysSinceLastLog - 1) * 10, 10);
+    }
+
+    // Mood deductions — map 'rough' to "low mood"
+    const moodLogs = recentLogs.filter(l => l.outcome !== null);
+    const lastTwo  = moodLogs.slice(0, 2);
+    const roughCount = lastTwo.filter(l => l.outcome === 'gave_in').length;
+    if (roughCount >= 2) score -= 15;
+    else if (roughCount >= 1) score -= 10;
+
+    // Streak bonuses
+    if (streak > 30) score += 10;
+    else if (streak > 7) score += 5;
+
+    score = Math.max(0, Math.min(100, score));
+
+    const label =
+      score >= 70 ? "You're doing well"
+      : score >= 40 ? 'Stay mindful today'
+      : 'High risk — reach out';
+
+    res.json({ score, streak, label });
+  } catch (err) { next(err); }
+}
+
 // ── GET /v1/users/me/export ──────────────────────────────────
 async function exportData(req, res, next) {
   try {
@@ -191,4 +246,4 @@ function calculateStreak(logs) {
   return streak;
 }
 
-module.exports = { getMe, updateMe, verifyAge, deleteMe, getStats, exportData };
+module.exports = { getMe, updateMe, verifyAge, deleteMe, getStats, getStabilityScore, exportData };
