@@ -89,8 +89,28 @@ model User {
 
   logs        Log[]
   messages    AiMessage[]
+  trackers    AddictionTracker[]
 
   @@map("users")
+}
+
+model AddictionTracker {
+  id        String    @id @default(uuid())
+  userId    String    @map("user_id")
+  category  Addiction
+  name      String?
+  startDate DateTime  @map("start_date")
+  isActive  Boolean   @default(true) @map("is_active")
+  isPaused  Boolean   @default(false) @map("is_paused")
+  pausedAt  DateTime? @map("paused_at")
+  notes     String?
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("addiction_trackers")
 }
 
 model Log {

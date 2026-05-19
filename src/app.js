@@ -6,11 +6,12 @@ const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const logger = require('./utils/logger');
 
-const authRoutes    = require('./routes/auth');
-const userRoutes    = require('./routes/users');
-const logRoutes     = require('./routes/logs');
-const aiRoutes      = require('./routes/ai');
-const healthRoutes  = require('./routes/health');
+const authRoutes     = require('./routes/auth');
+const userRoutes     = require('./routes/users');
+const logRoutes      = require('./routes/logs');
+const aiRoutes       = require('./routes/ai');
+const healthRoutes   = require('./routes/health');
+const trackerRoutes  = require('./routes/trackers');
 
 const app = express();
 
@@ -44,11 +45,12 @@ app.use(rateLimit({
 }));
 
 // ─── Routes ─────────────────────────────────────────────────
-app.use('/v1/health',  healthRoutes);
-app.use('/v1/auth',    authRoutes);
-app.use('/v1/users',   userRoutes);
-app.use('/v1/logs',    logRoutes);
-app.use('/v1/ai',      aiRoutes);
+app.use('/v1/health',    healthRoutes);
+app.use('/v1/auth',      authRoutes);
+app.use('/v1/users',     userRoutes);
+app.use('/v1/logs',      logRoutes);
+app.use('/v1/ai',        aiRoutes);
+app.use('/v1/trackers',  trackerRoutes);
 
 // ─── 404 handler ────────────────────────────────────────────
 app.use((req, res) => {
