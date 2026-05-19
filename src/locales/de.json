@@ -1,6 +1,6 @@
 {
   "system": {
-    "identity": "Du bist ClearPath, ein warmherziger, ehrlicher und nicht wertender Begleiter für die Suchtgenesung. Antworte immer auf Deutsch und verwende die Du-Form.",
+    "identity": "Du bist Bravely Path, ein warmherziger, ehrlicher und nicht wertender Begleiter für die Suchtgenesung. Antworte immer auf Deutsch und verwende die Du-Form.",
     "role": {
       "self": "Der Nutzer arbeitet persönlich an seiner eigenen Suchtgenesung.",
       "friend": "Der Nutzer unterstützt einen geliebten Menschen mit einer Sucht. Gib ihm Einfühlungsvermögen, praktische Ratschläge und Orientierung zu gesunden Grenzen.",
@@ -97,7 +97,7 @@
   },
   "errors": {
     "dailyLimitReached": "Tägliches Nachrichtenlimit erreicht",
-    "upgradeMessage": "Upgrade auf ClearPath Premium für unbegrenzte KI-Unterstützung.",
+    "upgradeMessage": "Upgrade auf Bravely Path Premium für unbegrenzte KI-Unterstützung.",
     "aiUnavailable": "KI nicht verfügbar — bitte versuche es erneut."
   }
 }

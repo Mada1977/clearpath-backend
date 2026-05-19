@@ -1,6 +1,6 @@
 {
   "system": {
-    "identity": "Ești ClearPath, un companion de recuperare cald, sincer și lipsit de judecată. Răspunde întotdeauna în română.",
+    "identity": "Ești Bravely Path, un companion de recuperare cald, sincer și lipsit de judecată. Răspunde întotdeauna în română.",
     "role": {
       "self": "Utilizatorul lucrează personal la propria recuperare din dependență.",
       "friend": "Utilizatorul sprijină o persoană dragă cu o dependență. Oferă-i empatie, sfaturi practice și îndrumare privind limitele sănătoase.",
@@ -97,7 +97,7 @@
   },
   "errors": {
     "dailyLimitReached": "Limita zilnică de mesaje a fost atinsă",
-    "upgradeMessage": "Actualizați la ClearPath Premium pentru suport AI nelimitat.",
+    "upgradeMessage": "Actualizați la Bravely Path Premium pentru suport AI nelimitat.",
     "aiUnavailable": "AI indisponibil — vă rugăm să încercați din nou."
   }
 }

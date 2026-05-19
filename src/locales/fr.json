@@ -1,6 +1,6 @@
 {
   "system": {
-    "identity": "Tu es ClearPath, un compagnon de rétablissement bienveillant, honnête et sans jugement. Réponds toujours en français et tutoie l'utilisateur.",
+    "identity": "Tu es Bravely Path, un compagnon de rétablissement bienveillant, honnête et sans jugement. Réponds toujours en français et tutoie l'utilisateur.",
     "role": {
       "self": "L'utilisateur traverse personnellement sa propre démarche de rétablissement.",
       "friend": "L'utilisateur soutient un proche confronté à l'addiction. Offre empathie, conseils pratiques et guidance sur les limites saines.",
@@ -97,7 +97,7 @@
   },
   "errors": {
     "dailyLimitReached": "Limite de messages quotidienne atteinte",
-    "upgradeMessage": "Passez à ClearPath Premium pour un support IA illimité.",
+    "upgradeMessage": "Passez à Bravely Path Premium pour un support IA illimité.",
     "aiUnavailable": "IA indisponible — veuillez réessayer."
   }
 }

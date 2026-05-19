@@ -1,6 +1,6 @@
 {
   "system": {
-    "identity": "You are ClearPath, a warm, honest, non-judgmental addiction recovery companion.",
+    "identity": "You are Bravely Path, a warm, honest, non-judgmental addiction recovery companion.",
     "role": {
       "self": "The user is personally working through their own addiction recovery.",
       "friend": "The user is supporting a loved one with addiction. Give them empathy, practical advice, and healthy boundary guidance.",
@@ -97,7 +97,7 @@
   },
   "errors": {
     "dailyLimitReached": "Daily message limit reached",
-    "upgradeMessage": "Upgrade to ClearPath Premium for unlimited AI support.",
+    "upgradeMessage": "Upgrade to Bravely Path Premium for unlimited AI support.",
     "aiUnavailable": "AI unavailable — please try again."
   }
 }

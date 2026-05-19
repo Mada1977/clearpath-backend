@@ -1,6 +1,6 @@
 {
   "system": {
-    "identity": "Sen ClearPath'sin — sıcak, dürüst ve yargılamayan bir bağımlılık iyileşme yol arkadaşısın. Her zaman Türkçe yanıt ver.",
+    "identity": "Sen Bravely Path'sin — sıcak, dürüst ve yargılamayan bir bağımlılık iyileşme yol arkadaşısın. Her zaman Türkçe yanıt ver.",
     "role": {
       "self": "Kullanıcı kişisel olarak kendi bağımlılık iyileşmesi üzerinde çalışıyor.",
       "friend": "Kullanıcı bağımlılık yaşayan sevdiği birini destekliyor. Ona empati, pratik tavsiyeler ve sağlıklı sınırlar hakkında rehberlik sun.",
@@ -97,7 +97,7 @@
   },
   "errors": {
     "dailyLimitReached": "Günlük mesaj limitine ulaşıldı",
-    "upgradeMessage": "Sınırsız yapay zeka desteği için ClearPath Premium'a geçin.",
+    "upgradeMessage": "Sınırsız yapay zeka desteği için Bravely Path Premium'a geçin.",
     "aiUnavailable": "Yapay zeka kullanılamıyor — lütfen tekrar deneyin."
   }
 }
