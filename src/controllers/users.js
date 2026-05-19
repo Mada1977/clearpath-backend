@@ -3,7 +3,12 @@ const logger = require('../utils/logger');
 
 // ── GET /v1/users/me ─────────────────────────────────────────
 async function getMe(req, res) {
-  res.json({ user: req.user });
+  const prisma = getPrisma();
+  const start = new Date(); start.setHours(0, 0, 0, 0);
+  const aiMessagesUsedToday = await prisma.aiMessage.count({
+    where: { userId: req.user.id, role: 'user', createdAt: { gte: start } },
+  });
+  res.json({ user: { ...req.user, aiMessagesUsedToday } });
 }
 
 // ── PATCH /v1/users/me ───────────────────────────────────────
@@ -271,4 +276,55 @@ async function updateActive(req, res, next) {
   } catch (err) { next(err); }
 }
 
-module.exports = { getMe, updateMe, verifyAge, deleteMe, getStats, getStabilityScore, updatePushToken, updateActive, exportData };
+// ── POST /v1/users/me/start-trial ───────────────────────────
+async function startTrial(req, res, next) {
+  try {
+    if (req.user.isPremium) {
+      return res.status(400).json({ error: 'Already premium.' });
+    }
+    if (req.user.trialStartedAt) {
+      return res.status(400).json({ error: 'Free trial already used.' });
+    }
+    const prisma = getPrisma();
+    const trialEnd = new Date(Date.now() + 7 * 86400000);
+    const updated = await prisma.user.update({
+      where: { id: req.user.id },
+      data: {
+        isPremium: true,
+        premiumPlan: 'trial',
+        trialStartedAt: new Date(),
+        premiumExpiresAt: trialEnd,
+      },
+      select: { isPremium: true, premiumPlan: true, premiumExpiresAt: true, trialStartedAt: true },
+    });
+    res.json({ message: '7-day free trial started!', ...updated });
+  } catch (err) { next(err); }
+}
+
+// ── POST /v1/users/me/upgrade ───────────────────────────────
+async function upgrade(req, res, next) {
+  try {
+    const { plan } = req.body;
+    if (!['weekly', 'monthly', 'yearly'].includes(plan)) {
+      return res.status(400).json({ error: 'Invalid plan. Use: weekly, monthly, yearly.' });
+    }
+    const durations = { weekly: 7, monthly: 30, yearly: 365 };
+    const days = durations[plan];
+    const now = new Date();
+    // Extend from current expiry if already premium, otherwise from now
+    const base = req.user.isPremium && req.user.premiumExpiresAt && new Date(req.user.premiumExpiresAt) > now
+      ? new Date(req.user.premiumExpiresAt)
+      : now;
+    const expiresAt = new Date(base.getTime() + days * 86400000);
+
+    const prisma = getPrisma();
+    const updated = await prisma.user.update({
+      where: { id: req.user.id },
+      data: { isPremium: true, premiumPlan: plan, premiumExpiresAt: expiresAt },
+      select: { isPremium: true, premiumPlan: true, premiumExpiresAt: true },
+    });
+    res.json({ message: `Upgraded to ${plan} plan!`, ...updated });
+  } catch (err) { next(err); }
+}
+
+module.exports = { getMe, updateMe, verifyAge, deleteMe, getStats, getStabilityScore, updatePushToken, updateActive, exportData, startTrial, upgrade };

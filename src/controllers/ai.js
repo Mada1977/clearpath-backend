@@ -6,7 +6,7 @@ const logger = require('../utils/logger');
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const MODEL  = process.env.AI_MODEL || 'claude-sonnet-4-6';
-const FREE_LIMIT = parseInt(process.env.AI_FREE_DAILY_LIMIT || '20');
+const FREE_LIMIT = parseInt(process.env.AI_FREE_DAILY_LIMIT || '10');
 
 // ── POST /v1/ai/chat (streaming via SSE) ─────────────────────
 async function chat(req, res, next) {

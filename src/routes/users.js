@@ -17,5 +17,7 @@ router.get('/me/stability-score',  ctrl.getStabilityScore);
 router.patch('/me/push-token',     ctrl.updatePushToken);
 router.patch('/me/active',         ctrl.updateActive);
 router.get('/me/export',           ctrl.exportData);
+router.post('/me/start-trial',     ctrl.startTrial);
+router.post('/me/upgrade',         ctrl.upgrade);
 
 module.exports = router;

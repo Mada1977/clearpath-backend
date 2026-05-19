@@ -24,10 +24,23 @@ async function authenticate(req, res, next) {
         stage: true,
         dailyGoal: true,
         isPremium: true,
+        premiumPlan: true,
+        premiumExpiresAt: true,
+        trialStartedAt: true,
         ageVerified: true,
         locale: true,
       },
     });
+
+    // Auto-expire premium/trial
+    if (user && user.isPremium && user.premiumExpiresAt && new Date() > user.premiumExpiresAt) {
+      await prisma.user.update({
+        where: { id: user.id },
+        data: { isPremium: false, premiumPlan: null },
+      });
+      user.isPremium = false;
+      user.premiumPlan = null;
+    }
 
     if (!user) {
       return res.status(401).json({ error: 'User not found' });
@@ -36,10 +49,16 @@ async function authenticate(req, res, next) {
     // notificationPrivacy instructs the frontend to use generic push notification
     // titles (no addiction name) when the user is recovering from pornography.
     const { rtl } = getLocaleInfo(user.locale);
+    const trialDaysLeft = user.trialStartedAt
+      ? Math.max(0, 7 - Math.floor((Date.now() - new Date(user.trialStartedAt).getTime()) / 86400000))
+      : null;
+
     req.user = {
       ...user,
       notificationPrivacy: user.addictions.includes('pornography'),
       rtl,
+      trialDaysLeft,
+      isOnTrial: !!user.trialStartedAt && trialDaysLeft > 0 && user.isPremium,
     };
     next();
   } catch (err) {
