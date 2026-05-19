@@ -1,11 +1,13 @@
 require('dotenv').config();
 const app = require('./app');
 const logger = require('./utils/logger');
+const { startCheckInReminderJob } = require('./jobs/checkInReminder');
 
 const PORT = process.env.PORT || 3000;
 
 const server = app.listen(PORT, () => {
-  logger.info(`ClearPath API running on port ${PORT} [${process.env.NODE_ENV}]`);
+  logger.info(`Bravely Path API running on port ${PORT} [${process.env.NODE_ENV}]`);
+  startCheckInReminderJob();
 });
 
 // Graceful shutdown

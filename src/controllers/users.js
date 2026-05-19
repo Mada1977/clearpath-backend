@@ -246,4 +246,29 @@ function calculateStreak(logs) {
   return streak;
 }
 
-module.exports = { getMe, updateMe, verifyAge, deleteMe, getStats, getStabilityScore, exportData };
+// ── PATCH /v1/users/me/push-token ───────────────────────────
+async function updatePushToken(req, res, next) {
+  try {
+    const { expoPushToken } = req.body;
+    const prisma = getPrisma();
+    await prisma.user.update({
+      where: { id: req.user.id },
+      data: { expoPushToken: expoPushToken || null },
+    });
+    res.json({ ok: true });
+  } catch (err) { next(err); }
+}
+
+// ── PATCH /v1/users/me/active ────────────────────────────────
+async function updateActive(req, res, next) {
+  try {
+    const prisma = getPrisma();
+    await prisma.user.update({
+      where: { id: req.user.id },
+      data: { lastActiveAt: new Date() },
+    });
+    res.json({ ok: true });
+  } catch (err) { next(err); }
+}
+
+module.exports = { getMe, updateMe, verifyAge, deleteMe, getStats, getStabilityScore, updatePushToken, updateActive, exportData };

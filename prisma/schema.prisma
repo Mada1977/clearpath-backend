@@ -82,10 +82,12 @@ model User {
   isPremium   Boolean    @default(false) @map("is_premium")
   ageVerified Boolean    @default(false) @map("age_verified")
   locale      String     @default("fr-FR")
-  resetToken  String?    @map("reset_token")
-  resetExpiry DateTime?  @map("reset_expiry")
-  createdAt   DateTime   @default(now()) @map("created_at")
-  updatedAt   DateTime   @updatedAt @map("updated_at")
+  resetToken     String?    @map("reset_token")
+  resetExpiry    DateTime?  @map("reset_expiry")
+  expoPushToken  String?    @map("expo_push_token")
+  lastActiveAt   DateTime?  @map("last_active_at")
+  createdAt      DateTime   @default(now()) @map("created_at")
+  updatedAt      DateTime   @updatedAt @map("updated_at")
 
   logs        Log[]
   messages    AiMessage[]
