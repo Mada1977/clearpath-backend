@@ -7,7 +7,7 @@ const router = Router();
 router.get('/', async (req, res) => {
   try {
     await getPrisma().$queryRaw`SELECT 1`;
-    res.json({ status: 'ok', service: 'ClearPath API', timestamp: new Date().toISOString() });
+    res.json({ status: 'ok', service: 'Bravely Path API', timestamp: new Date().toISOString() });
   } catch {
     res.status(503).json({ status: 'degraded', db: 'unreachable' });
   }

@@ -1,7 +1,7 @@
 {
   "name": "clearpath-backend",
   "version": "1.0.0",
-  "description": "ClearPath addiction recovery app — backend API",
+  "description": "Bravely Path addiction recovery app — backend API",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
