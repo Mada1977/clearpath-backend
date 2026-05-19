@@ -70,6 +70,12 @@ enum MessageRole {
   assistant
 }
 
+enum SupporterStatus {
+  pending
+  active
+  revoked
+}
+
 model User {
   id          String     @id @default(uuid())
   email       String     @unique
@@ -92,6 +98,7 @@ model User {
   logs        Log[]
   messages    AiMessage[]
   trackers    AddictionTracker[]
+  supporters  SupporterLink[]
 
   @@map("users")
 }
@@ -133,6 +140,22 @@ model Log {
   @@index([userId])
   @@index([userId, loggedAt])
   @@map("logs")
+}
+
+model SupporterLink {
+  id             String          @id @default(uuid())
+  userId         String          @map("user_id")
+  supporterEmail String          @map("supporter_email")
+  inviteCode     String          @unique @map("invite_code")
+  status         SupporterStatus @default(pending)
+  shareStreak    Boolean         @default(true) @map("share_streak")
+  shareMood      Boolean         @default(false) @map("share_mood")
+  createdAt      DateTime        @default(now()) @map("created_at")
+
+  user           User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("supporter_links")
 }
 
 model AiMessage {
