@@ -13,11 +13,17 @@ const aiRoutes       = require('./routes/ai');
 const healthRoutes   = require('./routes/health');
 const trackerRoutes   = require('./routes/trackers');
 const supporterRoutes = require('./routes/supporters');
+const privacyRoutes   = require('./routes/privacy');
 
 const app = express();
 
 // ─── Security middleware ────────────────────────────────────
-app.use(helmet());
+app.use((req, res, next) => {
+  if (req.path === '/privacy') {
+    return helmet({ contentSecurityPolicy: false })(req, res, next);
+  }
+  return helmet()(req, res, next);
+});
 
 const STATIC_ORIGINS = [
   'http://localhost:8081',
@@ -81,6 +87,7 @@ app.use('/v1/logs',      logRoutes);
 app.use('/v1/ai',        aiRoutes);
 app.use('/v1/trackers',   trackerRoutes);
 app.use('/v1/supporters', supporterRoutes);
+app.use('/privacy',       privacyRoutes);
 
 // ─── 404 handler ────────────────────────────────────────────
 app.use((req, res) => {
