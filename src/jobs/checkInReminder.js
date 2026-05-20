@@ -1,5 +1,6 @@
 const { getPrisma } = require('../models/prisma');
 const logger = require('../utils/logger');
+const emailSvc = require('../utils/email');
 
 const EXPO_PUSH_URL = 'https://exp.host/--/api/v2/push/send';
 
@@ -46,31 +47,47 @@ async function runCheckInReminder() {
 
   const prisma = getPrisma();
   const cutoff = new Date(Date.now() - 24 * 3600 * 1000);
+  const utcHour = new Date().getUTCHours();
 
   try {
     const users = await prisma.user.findMany({
       where: {
-        expoPushToken: { not: null },
         OR: [
-          { lastActiveAt: null },
-          { lastActiveAt: { lt: cutoff } },
+          { expoPushToken: { not: null } },
+          { emailReminderEnabled: true },
+        ],
+        AND: [
+          {
+            OR: [
+              { lastActiveAt: null },
+              { lastActiveAt: { lt: cutoff } },
+            ],
+          },
         ],
       },
-      select: { expoPushToken: true, name: true, locale: true },
+      select: { id: true, email: true, expoPushToken: true, name: true, locale: true, emailReminderEnabled: true },
     });
 
-    const notifications = users.map(u => {
+    // Push notifications — send whenever not in quiet hours
+    const pushUsers = users.filter(u => u.expoPushToken);
+    const notifications = pushUsers.map(u => {
       const msg = getMessage(u.locale);
-      return {
-        to: u.expoPushToken,
-        title: msg.title,
-        body: msg.body,
-        sound: 'default',
-      };
+      return { to: u.expoPushToken, title: msg.title, body: msg.body, sound: 'default' };
     });
-
     await sendPushBatch(notifications);
-    if (users.length) logger.info(`Check-in reminders sent to ${users.length} users`);
+
+    // Emails — only at 9am UTC
+    if (utcHour === 9) {
+      const emailUsers = users.filter(u => u.emailReminderEnabled);
+      for (const u of emailUsers) {
+        emailSvc.sendDailyCheckIn(u.email, u.name, u.id).catch(err =>
+          logger.error(`Check-in email failed for ${u.id}:`, err)
+        );
+      }
+      if (emailUsers.length) logger.info(`Daily check-in emails queued for ${emailUsers.length} users`);
+    }
+
+    if (users.length) logger.info(`Check-in reminders processed for ${users.length} users`);
   } catch (err) {
     logger.error('checkInReminder error:', err);
   }

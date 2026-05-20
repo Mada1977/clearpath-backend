@@ -14,7 +14,7 @@ async function getMe(req, res) {
 // ── PATCH /v1/users/me ───────────────────────────────────────
 async function updateMe(req, res, next) {
   try {
-    const { name, addictions, stage, dailyGoal, locale, role } = req.body;
+    const { name, addictions, stage, dailyGoal, locale, role, emailReminderEnabled } = req.body;
     const prisma = getPrisma();
 
     // Pornography requires age verification before it can be added
@@ -32,10 +32,11 @@ async function updateMe(req, res, next) {
         ...(addictions  !== undefined && { addictions }),
         ...(stage       !== undefined && { stage }),
         ...(dailyGoal   !== undefined && { dailyGoal }),
-        ...(locale      !== undefined && { locale }),
-        ...(role        !== undefined && { role }),
+        ...(locale                !== undefined && { locale }),
+        ...(role                  !== undefined && { role }),
+        ...(emailReminderEnabled  !== undefined && { emailReminderEnabled }),
       },
-      select: { id: true, email: true, name: true, role: true, addictions: true, stage: true, dailyGoal: true, isPremium: true, ageVerified: true, locale: true },
+      select: { id: true, email: true, name: true, role: true, addictions: true, stage: true, dailyGoal: true, isPremium: true, ageVerified: true, locale: true, emailReminderEnabled: true },
     });
 
     res.json({

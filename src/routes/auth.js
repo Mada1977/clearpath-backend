@@ -49,4 +49,6 @@ router.post('/reset-password',
   ctrl.resetPassword
 );
 
+router.get('/unsubscribe', ctrl.unsubscribe);
+
 module.exports = router;

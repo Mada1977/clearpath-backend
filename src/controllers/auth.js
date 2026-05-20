@@ -3,6 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 const { getPrisma } = require('../models/prisma');
 const { tokenPair, verifyRefresh } = require('../utils/jwt');
 const logger = require('../utils/logger');
+const mailer = require('../utils/email');
 
 // ── POST /v1/auth/register ───────────────────────────────────
 async function register(req, res, next) {
@@ -23,6 +24,7 @@ async function register(req, res, next) {
 
     const tokens = tokenPair(user.id);
     logger.info(`New user registered: ${user.id}`);
+    mailer.sendWelcome(user.email, user.name).catch(err => logger.error('Welcome email failed:', err));
     res.status(201).json({ user, ...tokens });
   } catch (err) {
     next(err);
@@ -94,8 +96,7 @@ async function forgotPassword(req, res, next) {
       data: { resetToken: token, resetExpiry: expiry },
     });
 
-    // In production: send email with reset link
-    // await emailService.sendPasswordReset(email, token);
+    mailer.sendPasswordReset(user.email, token).catch(err => logger.error('Reset email failed:', err));
     logger.info(`Password reset requested for user ${user.id}`);
 
     res.json({ message: 'If that email exists, a reset link has been sent.' });
@@ -133,4 +134,22 @@ async function resetPassword(req, res, next) {
   }
 }
 
-module.exports = { register, login, refresh, logout, forgotPassword, resetPassword };
+// ── GET /v1/auth/unsubscribe?id=UUID&token=HMAC ──────────────
+async function unsubscribe(req, res, next) {
+  try {
+    const { id, token } = req.query;
+    if (!id || !token || !mailer.verifyUnsubToken(id, token)) {
+      return res.status(400).send('<p>Invalid or expired unsubscribe link.</p>');
+    }
+    const prisma = getPrisma();
+    await prisma.user.update({
+      where: { id },
+      data: { emailReminderEnabled: false },
+    });
+    res.send('<p style="font-family:sans-serif;padding:32px">You have been unsubscribed from daily check-in emails. You can re-enable them in the app under Profile → Settings.</p>');
+  } catch (err) {
+    next(err);
+  }
+}
+
+module.exports = { register, login, refresh, logout, forgotPassword, resetPassword, unsubscribe };

@@ -29,6 +29,7 @@ async function authenticate(req, res, next) {
         trialStartedAt: true,
         ageVerified: true,
         locale: true,
+        emailReminderEnabled: true,
       },
     });
 

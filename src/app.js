@@ -14,6 +14,7 @@ const healthRoutes   = require('./routes/health');
 const trackerRoutes   = require('./routes/trackers');
 const supporterRoutes = require('./routes/supporters');
 const privacyRoutes   = require('./routes/privacy');
+const adminRoutes     = require('./routes/admin');
 
 const app = express();
 
@@ -88,6 +89,7 @@ app.use('/v1/ai',        aiRoutes);
 app.use('/v1/trackers',   trackerRoutes);
 app.use('/v1/supporters', supporterRoutes);
 app.use('/privacy',       privacyRoutes);
+app.use('/v1/admin',      adminRoutes);
 
 // ─── 404 handler ────────────────────────────────────────────
 app.use((req, res) => {

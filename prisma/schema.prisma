@@ -93,6 +93,7 @@ model User {
   locale      String     @default("fr-FR")
   resetToken     String?    @map("reset_token")
   resetExpiry    DateTime?  @map("reset_expiry")
+  emailReminderEnabled Boolean   @default(false) @map("email_reminder_enabled")
   expoPushToken  String?    @map("expo_push_token")
   lastActiveAt   DateTime?  @map("last_active_at")
   createdAt      DateTime   @default(now()) @map("created_at")
