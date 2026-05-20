@@ -19,14 +19,42 @@ const app = express();
 // ─── Security middleware ────────────────────────────────────
 app.use(helmet());
 
-const allowedOrigins = (process.env.ALLOWED_ORIGINS || '').split(',').map(o => o.trim());
-app.use(cors({
+const STATIC_ORIGINS = [
+  'http://localhost:8081',
+  'http://localhost:8082',
+  'http://localhost:8083',
+];
+
+const ORIGIN_PATTERNS = [
+  /^https:\/\/[^.]+\.onrender\.com$/,
+  /^https:\/\/[^.]+\.exp\.direct$/,
+];
+
+const envOrigins = (process.env.ALLOWED_ORIGINS || '')
+  .split(',')
+  .map(o => o.trim())
+  .filter(Boolean);
+
+function isAllowedOrigin(origin) {
+  if (!origin) return true;
+  if (STATIC_ORIGINS.includes(origin)) return true;
+  if (envOrigins.includes(origin)) return true;
+  return ORIGIN_PATTERNS.some(re => re.test(origin));
+}
+
+const corsOptions = {
   origin: (origin, cb) => {
-    if (!origin || allowedOrigins.includes(origin)) return cb(null, true);
+    if (isAllowedOrigin(origin)) return cb(null, true);
     cb(new Error(`CORS blocked: ${origin}`));
   },
   credentials: true,
-}));
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+// Handle OPTIONS preflight for all routes
+app.options('*', cors(corsOptions));
+app.use(cors(corsOptions));
 
 // ─── General middleware ─────────────────────────────────────
 app.use(compression());
