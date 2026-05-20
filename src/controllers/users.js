@@ -290,7 +290,7 @@ async function startTrial(req, res, next) {
       return res.status(400).json({ error: 'Free trial already used.' });
     }
     const prisma = getPrisma();
-    const trialEnd = new Date(Date.now() + 7 * 86400000);
+    const trialEnd = new Date(Date.now() + 3 * 86400000);
     const updated = await prisma.user.update({
       where: { id: req.user.id },
       data: {
@@ -301,7 +301,7 @@ async function startTrial(req, res, next) {
       },
       select: { isPremium: true, premiumPlan: true, premiumExpiresAt: true, trialStartedAt: true },
     });
-    res.json({ message: '7-day free trial started!', ...updated });
+    res.json({ message: '3-day free trial started!', ...updated });
   } catch (err) { next(err); }
 }
 

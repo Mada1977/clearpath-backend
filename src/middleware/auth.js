@@ -50,7 +50,7 @@ async function authenticate(req, res, next) {
     // titles (no addiction name) when the user is recovering from pornography.
     const { rtl } = getLocaleInfo(user.locale);
     const trialDaysLeft = user.trialStartedAt
-      ? Math.max(0, 7 - Math.floor((Date.now() - new Date(user.trialStartedAt).getTime()) / 86400000))
+      ? Math.max(0, 3 - Math.floor((Date.now() - new Date(user.trialStartedAt).getTime()) / 86400000))
       : null;
 
     req.user = {
