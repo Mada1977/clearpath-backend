@@ -32,6 +32,18 @@ function detectCrisis(text) {
   return CRISIS_KEYWORDS.some(kw => lower.includes(kw.toLowerCase()));
 }
 
+// ─── International numbers — prepended to EVERY response ────────────────────
+// 112 works in 190+ countries; shown first so it is never missed.
+const INTERNATIONAL = [
+  { name: '🚨 112 — Universal emergency', number: '112',               available: '24/7 · 190+ countries (Europe, Asia, Africa)' },
+  { name: '911 (USA / Canada)',            number: '911',               available: '24/7' },
+  { name: '999 (UK)',                      number: '999',               available: '24/7' },
+  { name: '000 (Australia)',               number: '000',               available: '24/7' },
+  { name: 'Befrienders Worldwide',         number: 'befrienders.org',   available: '24/7 · Global' },
+  { name: 'Crisis Text Line',              number: 'Text HOME to 741741', available: 'USA / UK / Canada / Ireland' },
+  { name: 'IASP Crisis Centres',           number: 'iasp.info/resources/Crisis_Centres', available: '24/7 · Global directory' },
+];
+
 function getHelplines(locale = 'en') {
   const country = (locale.split('-')[1] || '').toUpperCase();
   const lang    = locale.split('-')[0].toLowerCase();
@@ -141,13 +153,11 @@ function getHelplines(locale = 'en') {
     ],
   };
 
-  // Prefer specific country, then fall back by language region
-  if (lines[country]) return lines[country];
+  // Resolve the country/language-specific list
+  const local = lines[country] ?? (lang === 'ar' ? [] : lines.DEFAULT);
 
-  // Language-based fallbacks for Arabic when country code not matched
-  if (lang === 'ar') return lines.DEFAULT;
-
-  return lines.DEFAULT;
+  // International numbers always appear first so no user ever misses 112
+  return [...INTERNATIONAL, ...local];
 }
 
 module.exports = { detectCrisis, getHelplines };
