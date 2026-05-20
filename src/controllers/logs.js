@@ -7,6 +7,11 @@ async function createLog(req, res, next) {
     const { type, addiction, trigger, intensity, mood, outcome, notes, loggedAt } = req.body;
     const prisma = getPrisma();
 
+    // Derive outcome from type when the client doesn't send it explicitly.
+    // The log screen sends `type` ('resisted'/'used') but not `outcome`.
+    const resolvedOutcome =
+      outcome ?? (type === 'resisted' ? 'resisted' : type === 'used' ? 'gave_in' : null);
+
     const log = await prisma.log.create({
       data: {
         userId:    req.user.id,
@@ -15,7 +20,7 @@ async function createLog(req, res, next) {
         trigger:   trigger || 'unknown',
         intensity: intensity ? parseInt(intensity) : null,
         mood:      mood || null,
-        outcome:   outcome || null,
+        outcome:   resolvedOutcome,
         notes:     notes || null,
         loggedAt:  loggedAt ? new Date(loggedAt) : new Date(),
       },

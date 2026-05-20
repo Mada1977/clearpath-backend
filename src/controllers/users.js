@@ -104,7 +104,7 @@ async function getStats(req, res, next) {
         where: { userId, loggedAt: { gte: todayStart, lte: todayEnd } },
         orderBy: { loggedAt: 'desc' },
       }),
-      prisma.log.findMany({ where: { userId }, select: { outcome: true, trigger: true, loggedAt: true } }),
+      prisma.log.findMany({ where: { userId }, select: { type: true, outcome: true, trigger: true, loggedAt: true } }),
       prisma.log.findMany({
         where: { userId, loggedAt: { gte: weekStart } },
         orderBy: { loggedAt: 'desc' },
@@ -127,9 +127,13 @@ async function getStats(req, res, next) {
     // All-time totals
     const totalResisted = allLogs.filter(l => l.outcome === 'resisted').length;
     const totalGaveIn   = allLogs.filter(l => l.outcome === 'gave_in').length;
+    const totalSos      = allLogs.filter(l => l.type === 'craving_sos').length;
 
     res.json({
       streak,
+      totalResisted,
+      totalUsed: totalGaveIn,
+      totalSos,
       today: { resisted: todayResisted, gaveIn: todayGaveIn, logs: todayLogs },
       week: recentLogs,
       allTime: { resisted: totalResisted, gaveIn: totalGaveIn },
