@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const logger = require('./logger');
 
-const FROM = 'Bravely Path <onboarding@resend.dev>';
+const FROM = 'Bravely Path <noreply@blackctrans.com>';
 const APP_URL = 'https://bravely-path.onrender.com';
 const BACKEND_URL = 'https://clearpath-backend-marl.onrender.com/v1';
 
