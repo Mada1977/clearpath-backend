@@ -1,4 +1,5 @@
 const Anthropic = require('@anthropic-ai/sdk');
+const { franc } = require('franc-min');
 const { getPrisma } = require('../models/prisma');
 const { detectCrisis, getHelplines } = require('../utils/crisis');
 const { detectHarmfulQuery, REDIRECT_RESPONSE } = require('../utils/safetyFilter');
@@ -8,6 +9,44 @@ const logger = require('../utils/logger');
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const MODEL  = process.env.AI_MODEL || 'claude-sonnet-4-6';
 const FREE_LIMIT = parseInt(process.env.AI_FREE_DAILY_LIMIT || '10');
+
+const FRANC_TO_LANGUAGE = {
+  fra: 'French',
+  ron: 'Romanian',
+  ara: 'Arabic',
+  spa: 'Spanish',
+  por: 'Portuguese',
+  deu: 'German',
+  ita: 'Italian',
+  nld: 'Dutch',
+  pol: 'Polish',
+  tur: 'Turkish',
+  kor: 'Korean',
+  eng: 'English',
+};
+
+const LOCALE_TO_LANGUAGE = {
+  'fr': 'French', 'fr-FR': 'French',
+  'ro': 'Romanian', 'ro-RO': 'Romanian',
+  'ar': 'Arabic', 'ar-SA': 'Arabic',
+  'es': 'Spanish', 'es-ES': 'Spanish',
+  'pt': 'Portuguese', 'pt-BR': 'Portuguese', 'pt-PT': 'Portuguese',
+  'de': 'German', 'de-DE': 'German',
+  'it': 'Italian', 'it-IT': 'Italian',
+  'nl': 'Dutch', 'nl-NL': 'Dutch',
+  'pl': 'Polish', 'pl-PL': 'Polish',
+  'tr': 'Turkish', 'tr-TR': 'Turkish',
+  'ko': 'Korean', 'ko-KR': 'Korean',
+  'en': 'English', 'en-US': 'English',
+};
+
+function detectMessageLanguage(message, userLocale) {
+  const detected = franc(message, { minLength: 5 });
+  if (detected !== 'und' && FRANC_TO_LANGUAGE[detected]) {
+    return FRANC_TO_LANGUAGE[detected];
+  }
+  return LOCALE_TO_LANGUAGE[userLocale] || LOCALE_TO_LANGUAGE[(userLocale || '').split('-')[0]] || 'English';
+}
 
 // ── POST /v1/ai/chat (streaming via SSE) ─────────────────────
 async function chat(req, res, next) {
@@ -48,7 +87,8 @@ async function chat(req, res, next) {
     }
 
     const userCrisis = detectCrisis(message);
-    const systemPrompt = buildSystemPrompt(user);
+    const detectedLanguage = detectMessageLanguage(message, user.locale);
+    const systemPrompt = buildSystemPrompt(user, detectedLanguage);
 
     const contextMessages = history.slice(-10).map(m => ({
       role: m.role,
@@ -171,7 +211,7 @@ Your purpose is recovery support and healing. Every response should move the use
 
 // ─── Helpers ─────────────────────────────────────────────────
 
-function buildSystemPrompt(user) {
+function buildSystemPrompt(user, detectedLanguage) {
   const locale = user.locale;
 
   const addictionLabels = user.addictions.length > 0
@@ -187,7 +227,7 @@ function buildSystemPrompt(user) {
     t(locale, `system.stage.${user.stage}`),
     t(locale, 'system.principles_header'),
     ...principles.map(p => `- ${p}`),
-    `LANGUAGE RULE — this overrides everything else:\nThe user's selected language locale is: ${user.locale}\nAlways respond in the user's chosen language:\n- fr / fr-FR = French\n- ar / ar-SA = Arabic\n- es / es-ES = Spanish\n- ro / ro-RO = Romanian\n- de / de-DE = German\n- it / it-IT = Italian\n- pt / pt-BR = Portuguese\n- nl / nl-NL = Dutch\n- pl / pl-PL = Polish\n- tr / tr-TR = Turkish\n- en / en-US = English (default)\nNever respond in English if the user chose another language. Even if the user's message is written in English, always reply in their selected language.`,
+    `LANGUAGE RULE — this overrides everything else:\nThe user is writing in ${detectedLanguage}. You MUST respond in ${detectedLanguage}. Match the user's language exactly. Never switch to a different language.`,
     SAFETY_RULES,
   ].filter(Boolean).join('\n\n');
 }
