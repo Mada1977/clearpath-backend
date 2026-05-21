@@ -135,7 +135,7 @@ async function chat(req, res, next) {
         res.write(`data: ${JSON.stringify({ type: 'crisis', helplines })}\n\n`);
       }
 
-      res.write(`data: ${JSON.stringify({ type: 'done', crisis: isCrisis })}\n\n`);
+      res.write(`data: ${JSON.stringify({ type: 'done', crisis: isCrisis, detectedLanguage })}\n\n`);
       res.end();
 
       saveMessages(user.id, message, fullResponse, isCrisis, totalTokens, prisma).catch(
