@@ -187,7 +187,7 @@ function buildSystemPrompt(user) {
     t(locale, `system.stage.${user.stage}`),
     t(locale, 'system.principles_header'),
     ...principles.map(p => `- ${p}`),
-    'CRITICAL: Always respond in the exact same language the user writes in. If they write in English, respond in English. If they write in French, respond in French. If they write in Arabic, respond in Arabic. Never switch languages unless the user switches first.',
+    `LANGUAGE RULE — this overrides everything else:\nThe user's selected language locale is: ${user.locale}\nAlways respond in the user's chosen language:\n- fr / fr-FR = French\n- ar / ar-SA = Arabic\n- es / es-ES = Spanish\n- ro / ro-RO = Romanian\n- de / de-DE = German\n- it / it-IT = Italian\n- pt / pt-BR = Portuguese\n- nl / nl-NL = Dutch\n- pl / pl-PL = Polish\n- tr / tr-TR = Turkish\n- en / en-US = English (default)\nNever respond in English if the user chose another language. Even if the user's message is written in English, always reply in their selected language.`,
     SAFETY_RULES,
   ].filter(Boolean).join('\n\n');
 }

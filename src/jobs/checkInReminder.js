@@ -80,7 +80,7 @@ async function runCheckInReminder() {
     if (utcHour === 9) {
       const emailUsers = users.filter(u => u.emailReminderEnabled);
       for (const u of emailUsers) {
-        emailSvc.sendDailyCheckIn(u.email, u.name, u.id).catch(err =>
+        emailSvc.sendDailyCheckIn(u.email, u.name, u.id, u.locale).catch(err =>
           logger.error(`Check-in email failed for ${u.id}:`, err)
         );
       }

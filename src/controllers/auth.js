@@ -24,7 +24,7 @@ async function register(req, res, next) {
 
     const tokens = tokenPair(user.id);
     logger.info(`New user registered: ${user.id}`);
-    mailer.sendWelcome(user.email, user.name).catch(err => logger.error('Welcome email failed:', err));
+    mailer.sendWelcome(user.email, user.name, user.locale).catch(err => logger.error('Welcome email failed:', err));
     res.status(201).json({ user, ...tokens });
   } catch (err) {
     next(err);
@@ -96,7 +96,7 @@ async function forgotPassword(req, res, next) {
       data: { resetToken: token, resetExpiry: expiry },
     });
 
-    mailer.sendPasswordReset(user.email, token).catch(err => logger.error('Reset email failed:', err));
+    mailer.sendPasswordReset(user.email, token, user.locale).catch(err => logger.error('Reset email failed:', err));
     logger.info(`Password reset requested for user ${user.id}`);
 
     res.json({ message: 'If that email exists, a reset link has been sent.' });
