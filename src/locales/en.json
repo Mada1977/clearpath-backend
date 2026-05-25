@@ -34,6 +34,7 @@
       "gaming": "gaming",
       "social_media": "social media",
       "shopping": "shopping",
+      "work": "work addiction",
       "general": "general addiction"
     }
   },
@@ -93,6 +94,13 @@
       "Calculate how many hours of work this purchase would cost you.",
       "Write down the emotion you are feeling right now — shopping often masks something else.",
       "Call a friend or go for a short walk — the urge usually fades within 20 minutes."
+    ],
+    "work": [
+      "Step away from your screen now — close your laptop or put your phone face-down.",
+      "Set a firm boundary: write down your stop time and commit to it right now.",
+      "Do something restorative: take a walk, make tea, or call someone you care about.",
+      "Remind yourself: rest is not laziness — your best work comes after recovery.",
+      "Identify the real fear driving overwork (deadlines, approval, failure?). Name it, then let this hour be enough."
     ]
   },
   "errors": {

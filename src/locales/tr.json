@@ -34,6 +34,7 @@
       "gaming": "oyun bağımlılığı",
       "social_media": "sosyal medya",
       "shopping": "alışveriş bağımlılığı",
+      "work": "iş bağımlılığı",
       "general": "genel bağımlılık"
     }
   },
@@ -93,6 +94,13 @@
       "Bu alışverişin kaç saatlik işe mal olacağını hesapla.",
       "Şu an hissettiğin duyguyu yaz — alışveriş genellikle başka bir şeyi gizler.",
       "Bir arkadaşı ara veya kısa bir yürüyüşe çık — dürtü genellikle 20 dakika içinde geçer."
+    ],
+    "work": [
+      "Şimdi ekrandan uzaklaşın — dizüstü bilgisayarınızı kapatın veya telefonunuzu ekranı aşağı bakacak şekilde koyun.",
+      "Net bir sınır belirleyin: durma saatinizi yazın ve şimdi taahhüt edin.",
+      "Yenilenme sağlayan bir şey yapın: yürüyüşe çıkın, çay yapın ya da önem verdiğiniz birine telefon edin.",
+      "Kendinize hatırlatın: dinlenme tembellik değildir — en iyi çalışma toparlanmanın ardından gelir.",
+      "Aşırı çalışmayı besleyen gerçek korkuyu tanımlayın (son tarihler, onay, başarısızlık?). Adını koyun, ardından bu saatin yeterli olmasına izin verin."
     ]
   },
   "errors": {

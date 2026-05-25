@@ -34,6 +34,7 @@
       "gaming": "jeux vidéo",
       "social_media": "réseaux sociaux",
       "shopping": "achats compulsifs",
+      "work": "addiction au travail",
       "general": "addiction en général"
     }
   },
@@ -93,6 +94,13 @@
       "Calcule combien d'heures de travail cet achat représente.",
       "Note l'émotion que tu ressens maintenant — le shopping masque souvent autre chose.",
       "Appelle un ami ou fais une courte promenade — l'envie disparaît généralement en 20 minutes."
+    ],
+    "work": [
+      "Éloigne-toi de ton écran — ferme ton ordinateur ou pose ton téléphone face contre table.",
+      "Fixe une limite ferme : note ton heure d'arrêt et engage-toi à la respecter maintenant.",
+      "Fais quelque chose de récupérateur : marche, prépare un thé ou appelle quelqu'un qui te tient à cœur.",
+      "Rappelle-toi : le repos n'est pas de la paresse — ton meilleur travail vient après la récupération.",
+      "Identifie la vraie peur qui te pousse à trop travailler (délais, validation, peur de l'échec ?). Nomme-la, puis laisse cette heure suffire."
     ]
   },
   "errors": {

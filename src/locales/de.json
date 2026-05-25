@@ -34,6 +34,7 @@
       "gaming": "Gaming",
       "social_media": "Soziale Medien",
       "shopping": "Kaufsucht",
+      "work": "Arbeitssucht",
       "general": "allgemeine Sucht"
     }
   },
@@ -93,6 +94,13 @@
       "Rechne aus, wie viele Arbeitsstunden dieser Kauf kostet.",
       "Schreib auf, welche Emotion du gerade fühlst — Shopping maskiert oft etwas anderes.",
       "Ruf einen Freund an oder mache einen kurzen Spaziergang — der Drang vergeht meist in 20 Minuten."
+    ],
+    "work": [
+      "Tritt jetzt von deinem Bildschirm zurück — schließe deinen Laptop oder leg dein Handy mit dem Display nach unten.",
+      "Setze eine klare Grenze: Schreib deine Stopzeit auf und halte dich jetzt daran.",
+      "Tu etwas Erholendes: Geh spazieren, koche Tee oder ruf jemanden an, dem du wichtig bist.",
+      "Erinnere dich: Ruhe ist keine Faulheit — deine beste Arbeit kommt nach der Erholung.",
+      "Erkenne die wahre Angst, die Überarbeitung antreibt (Fristen, Anerkennung, Versagen?). Benenne sie und lass diese Stunde genug sein."
     ]
   },
   "errors": {

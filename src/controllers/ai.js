@@ -211,6 +211,15 @@ Your purpose is recovery support and healing. Every response should move the use
 
 // ─── Helpers ─────────────────────────────────────────────────
 
+const WORK_ADDICTION_GUIDANCE = `
+WORK ADDICTION GUIDANCE — apply when the user is recovering from work addiction:
+- Help the user set healthy boundaries with work (e.g., fixed stop times, no-email evenings).
+- Emphasise the importance of rest and recovery — sleep, leisure, and relationships are not optional.
+- Suggest concrete work-life balance strategies: scheduled breaks, protected personal time, delegation.
+- Help the user recognise overwork patterns: checking email compulsively, inability to "switch off", guilt when not working.
+- NEVER encourage "just one more hour", "you can rest later", or any language that normalises overwork.
+- Reframe rest as a performance strategy, not laziness — the research is clear that recovery improves output.`.trim();
+
 function buildSystemPrompt(user, detectedLanguage) {
   const locale = user.locale;
 
@@ -220,6 +229,8 @@ function buildSystemPrompt(user, detectedLanguage) {
 
   const principles = t(locale, 'system.principles', { returnObjects: true });
 
+  const hasWorkAddiction = user.addictions.includes('work');
+
   return [
     t(locale, 'system.identity'),
     t(locale, `system.role.${user.role}`) || t(locale, 'system.role.self'),
@@ -227,6 +238,7 @@ function buildSystemPrompt(user, detectedLanguage) {
     t(locale, `system.stage.${user.stage}`),
     t(locale, 'system.principles_header'),
     ...principles.map(p => `- ${p}`),
+    hasWorkAddiction ? WORK_ADDICTION_GUIDANCE : null,
     `LANGUAGE RULE — this overrides everything else:\nThe user is writing in ${detectedLanguage}. You MUST respond in ${detectedLanguage}. Match the user's language exactly. Never switch to a different language.`,
     SAFETY_RULES,
   ].filter(Boolean).join('\n\n');

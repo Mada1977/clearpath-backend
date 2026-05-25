@@ -33,6 +33,7 @@ enum Addiction {
   gaming
   social_media
   shopping
+  work
 }
 
 enum LogType {
@@ -51,6 +52,10 @@ enum Trigger {
   physical
   seeing_others
   unknown
+  overworking
+  fear_of_failure
+  need_for_control
+  perfectionism
 }
 
 enum Mood {

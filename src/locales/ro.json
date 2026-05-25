@@ -34,6 +34,7 @@
       "gaming": "jocuri video",
       "social_media": "rețele sociale",
       "shopping": "cumpărături compulsive",
+      "work": "dependența de muncă",
       "general": "dependență în general"
     }
   },
@@ -93,6 +94,13 @@
       "Calculează câte ore de muncă ar costa această achiziție.",
       "Notează emoția pe care o simți acum — cumpărăturile maschează adesea altceva.",
       "Sună un prieten sau fă o scurtă plimbare — impulsul dispare de obicei în 20 de minute."
+    ],
+    "work": [
+      "Depărtează-te de ecran acum — închide laptopul sau pune telefonul cu ecranul în jos.",
+      "Stabilește o limită fermă: scrie-ți ora de oprire și angajează-te acum.",
+      "Fă ceva care îți reîncarcă bateriile: plimbă-te, fă ceai sau sună pe cineva drag.",
+      "Reamintește-ți: odihna nu e lene — cel mai bun lucru vine după recuperare.",
+      "Identifică frica reală care te împinge să supramuncești (termene, aprobare, eșec?). Numiți-o, apoi lasă această oră să fie suficientă."
     ]
   },
   "errors": {

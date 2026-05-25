@@ -34,6 +34,7 @@
       "gaming": "gaming",
       "social_media": "social media",
       "shopping": "shopping compulsivo",
+      "work": "dipendenza dal lavoro",
       "general": "dipendenza in generale"
     }
   },
@@ -93,6 +94,13 @@
       "Calcola quante ore di lavoro costerebbe questo acquisto.",
       "Scrivi l'emozione che provi ora — lo shopping maschera spesso qualcos'altro.",
       "Chiama un amico o fai una breve passeggiata — l'impulso di solito svanisce in 20 minuti."
+    ],
+    "work": [
+      "Allontanati dallo schermo ora — chiudi il laptop o metti il telefono con lo schermo verso il basso.",
+      "Stabilisci un limite fermo: scrivi l'orario di stop e impegnati ora.",
+      "Fai qualcosa di rigenerante: fai una passeggiata, preparati un tè o chiama qualcuno a cui tieni.",
+      "Ricordati: il riposo non è pigrizia — il tuo lavoro migliore viene dopo il recupero.",
+      "Identifica la paura reale che guida il troppo lavoro (scadenze, approvazione, fallimento?). Nominala, poi lascia che quest'ora sia sufficiente."
     ]
   },
   "errors": {

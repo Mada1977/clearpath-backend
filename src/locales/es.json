@@ -34,6 +34,7 @@
       "gaming": "videojuegos",
       "social_media": "redes sociales",
       "shopping": "compras compulsivas",
+      "work": "adicción al trabajo",
       "general": "adicción en general"
     }
   },
@@ -93,6 +94,13 @@
       "Calcula cuántas horas de trabajo costaría esa compra.",
       "Escribe la emoción que sientes ahora mismo — las compras a menudo enmascaran otra cosa.",
       "Llama a un amigo o da un paseo corto — el impulso suele desaparecer en 20 minutos."
+    ],
+    "work": [
+      "Aléjate de tu pantalla ahora — cierra tu laptop o pon tu teléfono boca abajo.",
+      "Establece un límite firme: escribe tu hora de parada y comprométete ahora mismo.",
+      "Haz algo restaurador: sal a caminar, prepara un té o llama a alguien que te importa.",
+      "Recuérdate: el descanso no es pereza — tu mejor trabajo viene después de recuperarte.",
+      "Identifica el miedo real que impulsa el exceso de trabajo (plazos, aprobación, fracaso?). Nómbralo y deja que esta hora sea suficiente."
     ]
   },
   "errors": {

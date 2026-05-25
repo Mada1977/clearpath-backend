@@ -34,6 +34,7 @@
       "gaming": "jogos eletrónicos",
       "social_media": "redes sociais",
       "shopping": "compras compulsivas",
+      "work": "vício em trabalho",
       "general": "dependência em geral"
     }
   },
@@ -93,6 +94,13 @@
       "Calcula quantas horas de trabalho esta compra custaria.",
       "Escreve a emoção que sentes agora — as compras frequentemente mascaram outra coisa.",
       "Liga a um amigo ou dá uma curta caminhada — o impulso normalmente desaparece em 20 minutos."
+    ],
+    "work": [
+      "Afasta-te do ecrã agora — fecha o portátil ou coloca o telemóvel com o ecrã para baixo.",
+      "Estabelece um limite firme: escreve a tua hora de paragem e compromete-te agora.",
+      "Faz algo restaurador: dá uma caminhada, prepara um chá ou liga a alguém de quem gostas.",
+      "Lembra-te: descanso não é preguiça — o teu melhor trabalho vem depois da recuperação.",
+      "Identifica o medo real que impulsiona o excesso de trabalho (prazos, aprovação, fracasso?). Dá-lhe nome e deixa que esta hora seja suficiente."
     ]
   },
   "errors": {
