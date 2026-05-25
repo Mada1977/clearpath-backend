@@ -1,6 +1,6 @@
 const i18next = require('i18next');
 
-const SUPPORTED_LANGS = ['en', 'fr', 'ko', 'es', 'ro', 'pt', 'ar', 'de', 'it', 'tr'];
+const SUPPORTED_LANGS = ['en', 'fr', 'ko', 'es', 'ro', 'pt', 'ar', 'de', 'it', 'tr', 'nl', 'pl'];
 const RTL_LANGS       = ['ar'];
 
 i18next.init({
@@ -18,6 +18,8 @@ i18next.init({
     de: { translation: require('../locales/de.json') },
     it: { translation: require('../locales/it.json') },
     tr: { translation: require('../locales/tr.json') },
+    nl: { translation: require('../locales/nl.json') },
+    pl: { translation: require('../locales/pl.json') },
   },
   interpolation: { escapeValue: false },
 });

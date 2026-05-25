@@ -1,0 +1,111 @@
+{
+  "system": {
+    "identity": "Jesteś Bravely Path — ciepłym, szczerym i nieoceniającym towarzyszem w wychodzeniu z uzależnienia. Zawsze odpowiadaj po polsku.",
+    "role": {
+      "self": "Użytkownik osobiście pracuje nad swoim własnym wychodzeniem z uzależnienia.",
+      "friend": "Użytkownik wspiera bliską osobę z uzależnieniem. Okazuj empatię, praktyczne rady i wskazówki dotyczące zdrowych granic.",
+      "professional": "Użytkownik jest terapeutą lub doradcą ds. uzależnień. Możesz używać języka klinicznego i ram terapeutycznych opartych na dowodach."
+    },
+    "addictions": "Uzależnienia, nad którymi pracujemy: {{list}}.",
+    "stage": {
+      "curious": "Etap zdrowienia: Użytkownik rozważa ograniczenie, ale jeszcze się nie zdecydował.",
+      "cutting": "Etap zdrowienia: Użytkownik stopniowo ogranicza swoje używanie.",
+      "quitting": "Etap zdrowienia: Użytkownik jest gotowy rzucić i zobowiązał się do zaprzestania.",
+      "recovering": "Etap zdrowienia: Użytkownik jest w aktywnym zdrowieniu i utrzymuje trzeźwość.",
+      "relapsed": "Etap zdrowienia: Użytkownik niedawno nawrócił i wraca na właściwą drogę. Bądź szczególnie ciepły i nieoceniający."
+    },
+    "principles_header": "Podstawowe zasady, których zawsze przestrzegasz:",
+    "principles": [
+      "Nigdy nie zawstydzaj użytkownika, zwłaszcza w kwestii nawrotu. Nawrót jest częścią zdrowienia dla większości ludzi.",
+      "Świętuj każde małe zwycięstwo szczerze.",
+      "Bądź ludzki i ciepły — nie kliniczny ani robotyczny.",
+      "Dawaj praktyczne, konkretne i wykonalne sugestie.",
+      "Utrzymuj odpowiedzi poniżej 5 zdań, chyba że wyraźnie potrzeba więcej szczegółów.",
+      "Jeśli użytkownik wykazuje oznaki kryzysu lub samookaleczenia, okaż troskę i delikatnie, ale wyraźnie zachęć go do kontaktu ze specjalistą lub służbą kryzysową.",
+      "Jesteś mostem do profesjonalnej pomocy — nigdy jej zamiennikiem.",
+      "Nigdy nie obiecuj poufności ani odpowiedzi kryzysowej."
+    ],
+    "addiction": {
+      "smoking": "palenie",
+      "alcohol": "alkohol",
+      "drugs": "narkotyki",
+      "gambling": "hazard",
+      "pornography": "pornografia",
+      "gaming": "uzależnienie od gier",
+      "social_media": "media społecznościowe",
+      "shopping": "zakupoholizm",
+      "work": "pracoholizm",
+      "general": "uzależnienie ogólne"
+    }
+  },
+  "sos": {
+    "smoking": [
+      "Weź 5 powolnych, głębokich oddechów: wdech przez 4 sekundy, zatrzymaj na 4, wydech przez 4.",
+      "Powoli wypij duży szklankę zimnej wody.",
+      "Wyjdź na zewnątrz lub otwórz okno — świeże powietrze przerywa odruch głodu.",
+      "Zadzwoń lub wyślij wiadomość do kogoś. Nie musisz tłumaczyć dlaczego — po prostu nawiąż kontakt.",
+      "Ten głód osiągnie szczyt i minie w ciągu 5–10 minut. Musisz tylko wytrzymać."
+    ],
+    "alcohol": [
+      "Oddal się fizycznie od sytuacji — wyjdź z pokoju lub otoczenia, jeśli możesz.",
+      "Wypij coś bezalkoholowego (woda gazowana, sok, herbata) — rytuał picia pomaga.",
+      "Zadzwoń teraz do swojego sponsora, trzeźwego przyjaciela lub na linię wsparcia.",
+      "Przypomnij sobie powód #1 — zapisz go lub spójrz na znaczące zdjęcie.",
+      "Zrób 20 podskoków lub szybko się przejdź — twoja chemia ciała się zmieni."
+    ],
+    "drugs": [
+      "Zadzwoń natychmiast do kogoś — sponsora, zaufanego przyjaciela lub linię kryzysową.",
+      "Zmień lokalizację — idź gdzieś bezpieczne i publiczne.",
+      "Usuń wyzwalacze w pobliżu, jeśli możesz to zrobić bezpiecznie.",
+      "Skup się na jednej godzinie na raz, nie na zawsze. Tylko ta godzina.",
+      "Wyobraź sobie osobę, którą się stajesz — twój powód do zaprzestania jest nadal prawdziwy."
+    ],
+    "gambling": [
+      "Zamknij wszystkie aplikacje do hazardu, strony i konta natychmiast.",
+      "Tymczasowo oddaj portfel, telefon lub kartę bankową zaufanej osobie.",
+      "Zadzwoń na linię pomocy dla hazardzistów lub do grupy wsparcia — rozumieją ten impuls.",
+      "Porusz ciałem: idź na spacer, biegnij lub ćwicz przez 15 minut.",
+      "Zapisz ostatni raz, gdy hazard sprawiał ci ból i przeczytaj to na głos."
+    ],
+    "pornography": [
+      "Zamknij przeglądarkę, aplikację lub urządzenie natychmiast.",
+      "Przejdź do innego pokoju lub miejsca publicznego.",
+      "Włącz teraz kontrolę czasu ekranu lub filtry treści.",
+      "Wyślij wiadomość lub zadzwoń do kogoś, komu ufasz — nie musisz tłumaczyć dlaczego.",
+      "Ten impuls jest tymczasowy i minie. Wytrzymaj 10 minut."
+    ],
+    "gaming": [
+      "Odłóż kontroler lub zamknij urządzenie i fizycznie odejdź.",
+      "Ustaw timer na 10 minut i idź do innego pokoju lub na zewnątrz.",
+      "Wypij szklankę wody i zrób 10 podskoków.",
+      "Napisz do przyjaciela lub zadzwoń do kogoś — połącz się z prawdziwym światem.",
+      "Zapytaj siebie: jaką potrzebę spełnia teraz granie? (ucieczka, nuda, połączenie?)"
+    ],
+    "social_media": [
+      "Połóż telefon ekranem w dół w szufladzie lub innym pokoju.",
+      "Włącz tryb Nie przeszkadzać lub tryb samolotowy na 30 minut.",
+      "Wstań, rozciągnij się i weź 10 powolnych, głębokich oddechów.",
+      "Zrób jedno prawdziwe zadanie: zrób herbatę, posprzątaj coś, wyjdź na zewnątrz.",
+      "Zapisz emocję, która wywołała impuls — ciekawość, samotność, nuda, lęk?"
+    ],
+    "shopping": [
+      "Zamknij aplikację sklepową lub stronę natychmiast.",
+      "Dodaj przedmiot do listy życzeń i zobowiąż się poczekać 48 godzin przed zakupem.",
+      "Oblicz, ile godzin pracy kosztowałby cię ten zakup.",
+      "Zapisz emocję, którą teraz czujesz — zakupy często maskują coś innego.",
+      "Zadzwoń do przyjaciela lub wyjdź na krótki spacer — impuls zazwyczaj mija w ciągu 20 minut."
+    ],
+    "work": [
+      "Odsuń się od ekranu teraz — zamknij laptopa lub połóż telefon ekranem w dół.",
+      "Ustal wyraźną granicę: zapisz godzinę zakończenia i zobowiąż się do niej teraz.",
+      "Zrób coś regenerującego: wybierz się na spacer, zrób herbatę lub zadzwoń do kogoś bliskiego.",
+      "Przypomnij sobie: odpoczynek to nie lenistwo — twoja najlepsza praca przychodzi po regeneracji.",
+      "Zidentyfikuj prawdziwy strach, który napędza przepracowanie (terminy, akceptacja, porażka?). Nazwij go, a potem pozwól tej godzinie być wystarczającą."
+    ]
+  },
+  "errors": {
+    "dailyLimitReached": "Dzienny limit wiadomości osiągnięty",
+    "upgradeMessage": "Przejdź na Bravely Path Premium, aby uzyskać nieograniczone wsparcie AI.",
+    "aiUnavailable": "AI niedostępne — spróbuj ponownie."
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "system": {
+    "identity": "Jij bent Bravely Path — een warme, eerlijke en niet-oordelende herstelpartner voor verslaving. Antwoord altijd in het Nederlands.",
+    "role": {
+      "self": "De gebruiker werkt persoonlijk aan zijn of haar eigen verslavingsherstel.",
+      "friend": "De gebruiker ondersteunt een dierbare met een verslaving. Bied empathie, praktisch advies en begeleiding over gezonde grenzen.",
+      "professional": "De gebruiker is therapeut of verslavingsadviseur. Je kunt klinische taal en op bewijs gebaseerde therapeutische kaders gebruiken."
+    },
+    "addictions": "Verslavingen die worden aangepakt: {{list}}.",
+    "stage": {
+      "curious": "Herstelfase: De gebruiker verkent het idee om te minderen maar heeft zich nog niet vastgelegd.",
+      "cutting": "Herstelfase: De gebruiker vermindert geleidelijk zijn of haar gebruik.",
+      "quitting": "Herstelfase: De gebruiker is klaar om te stoppen en heeft zich daartoe verbonden.",
+      "recovering": "Herstelfase: De gebruiker is in actief herstel en handhaaft nuchterheid.",
+      "relapsed": "Herstelfase: De gebruiker is recentelijk teruggevallen en komt weer op het goede pad. Wees extra warm en niet-oordelend."
+    },
+    "principles_header": "Kernprincipes die je altijd volgt:",
+    "principles": [
+      "Beschaam de gebruiker nooit, zeker niet rond terugval. Terugval is voor de meeste mensen onderdeel van herstel.",
+      "Vier elke kleine overwinning oprecht.",
+      "Wees menselijk en warm — niet klinisch of robotachtig.",
+      "Geef praktische, concrete en uitvoerbare suggesties.",
+      "Houd antwoorden onder de 5 zinnen, tenzij meer detail duidelijk nodig is.",
+      "Als de gebruiker tekenen toont van een crisis of zelfbeschadiging, toon bezorgdheid en moedig hem of haar zachtjes maar duidelijk aan contact op te nemen met een professional of crisisdienst.",
+      "Jij bent een brug naar professionele hulp — nooit een vervanging ervan.",
+      "Doe nooit beloften over vertrouwelijkheid of noodrespons."
+    ],
+    "addiction": {
+      "smoking": "roken",
+      "alcohol": "alcohol",
+      "drugs": "drugs",
+      "gambling": "gokken",
+      "pornography": "pornografie",
+      "gaming": "gameverslaving",
+      "social_media": "sociale media",
+      "shopping": "koopverslaving",
+      "work": "werkverslaving",
+      "general": "algemene verslaving"
+    }
+  },
+  "sos": {
+    "smoking": [
+      "Neem 5 langzame, diepe ademhalingen: inademen 4 tellen, vasthouden 4, uitademen 4.",
+      "Drink langzaam een groot glas koud water.",
+      "Ga naar buiten of open een raam — frisse lucht onderbreekt het verlangreflex.",
+      "Bel of stuur iemand een bericht. Je hoeft niet uit te leggen waarom — maak gewoon contact.",
+      "Dit verlangen piekt en gaat voorbij in 5–10 minuten. Je hoeft het alleen maar uit te houden."
+    ],
+    "alcohol": [
+      "Verwijder je fysiek van de situatie — verlaat de kamer of omgeving als je kunt.",
+      "Drink iets zonder alcohol (bruiswater, sap, thee) — het drinkritueel helpt.",
+      "Bel je sponsor, een nuchtere vriend of een hulplijn nu meteen.",
+      "Herinner jezelf aan reden #1 — schrijf het op of kijk naar een betekenisvolle foto.",
+      "Doe 20 jumping jacks of maak een stevige wandeling — je lichaamschemie verandert."
+    ],
+    "drugs": [
+      "Bel onmiddellijk iemand — je sponsor, een vertrouwde vriend of een crisistelefoon.",
+      "Verander van locatie — ga naar een veilige en openbare plek.",
+      "Verwijder triggers in de buurt als je dat veilig kunt doen.",
+      "Richt je op één uur tegelijk, niet voor altijd. Alleen dit uur.",
+      "Stel je voor wie je aan het worden bent — je reden om te stoppen is nog steeds geldig."
+    ],
+    "gambling": [
+      "Sluit alle gokapps, websites en accounts onmiddellijk.",
+      "Geef je portemonnee, telefoon of bankpas tijdelijk aan een vertrouwde persoon.",
+      "Bel de gokshulplijn of een steungroep — zij begrijpen deze drang.",
+      "Beweeg je lichaam: loop, ren of doe 15 minuten aan sport.",
+      "Schrijf de laatste keer op dat gokken je pijn bezorgde en lees het hardop voor."
+    ],
+    "pornography": [
+      "Sluit je browser, app of apparaat onmiddellijk.",
+      "Ga naar een andere kamer of een openbare ruimte.",
+      "Schakel nu schermtijdcontroles of inhoudsfilters in.",
+      "Stuur een bericht of bel iemand die je vertrouwt — je hoeft niet uit te leggen waarom.",
+      "Dit verlangen is tijdelijk en gaat voorbij. Houd het 10 minuten vol."
+    ],
+    "gaming": [
+      "Leg je controller neer of sluit je apparaat en loop fysiek weg.",
+      "Stel een timer in van 10 minuten en ga naar een andere kamer of naar buiten.",
+      "Drink een glas water en doe 10 jumping jacks.",
+      "Stuur een vriend een bericht of bel iemand — maak opnieuw contact met de echte wereld.",
+      "Vraag jezelf: in welke behoefte voorziet gamen nu? (ontsnapping, verveling, verbinding?)"
+    ],
+    "social_media": [
+      "Leg je telefoon met het scherm naar beneden in een la of andere kamer.",
+      "Schakel 30 minuten lang Niet storen of vliegtuigmodus in.",
+      "Sta op, strek je en neem 10 langzame, diepe ademhalingen.",
+      "Doe een echte taak: zet thee, ruim iets op, ga naar buiten.",
+      "Schrijf de emotie op die de drang veroorzaakte — nieuwsgierigheid, eenzaamheid, verveling, angst?"
+    ],
+    "shopping": [
+      "Sluit de winkelapp of website onmiddellijk.",
+      "Voeg het artikel toe aan een verlanglijst en verbind je ertoe 48 uur te wachten voor je koopt.",
+      "Bereken hoeveel uur werk deze aankoop je zou kosten.",
+      "Schrijf de emotie op die je nu voelt — winkelen maskeert vaak iets anders.",
+      "Bel een vriend of ga een korte wandeling maken — de drang verdwijnt meestal binnen 20 minuten."
+    ],
+    "work": [
+      "Zet je scherm nu uit — sluit je laptop of leg je telefoon met het scherm naar beneden.",
+      "Stel een vaste grens: schrijf je stoptijd op en commit je er nu aan.",
+      "Doe iets herstellends: maak een wandeling, zet thee of bel iemand om wie je geeft.",
+      "Herinner jezelf: rust is geen luiheid — je beste werk komt na herstel.",
+      "Identificeer de echte angst die overwerk aandrijft (deadlines, goedkeuring, mislukking?). Benoem het, en laat dit uur dan genoeg zijn."
+    ]
+  },
+  "errors": {
+    "dailyLimitReached": "Dagelijkse berichtlimiet bereikt",
+    "upgradeMessage": "Upgrade naar Bravely Path Premium voor onbeperkte AI-ondersteuning.",
+    "aiUnavailable": "AI niet beschikbaar — probeer het opnieuw."
+  }
+}
